@@ -1,0 +1,35 @@
+{
+  "name": "dpt-athletics",
+  "version": "0.0.0",
+  "authors": [
+    "Dan Lourenco <danlourenco@gmail.com>",
+    "Laura Vecchio <lauramvecchio@gmail.com>"
+  ],
+  "license": "Durbrow Performance",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.8",
+    "angular-animate": "~1.3.8",
+    "angular-aria": "~1.3.8",
+    "angular-bootstrap": "~0.12.0",
+    "angular-cookies": "~1.3.8",
+    "angular-resource": "~1.3.8",
+    "angular-sanitize": "~1.3.8",
+    "angular-touch": "~1.3.8",
+    "angular-ui-tree": "~2.1.5",
+    "angular-ui-router": "~0.2.13",
+    "bootstrap-sass-official": "~3.2.0",
+    "highcharts": "~4.0.4",
+    "mobile-angular-ui": "~1.2.0-beta.11"
+  },
+  "resolutions": {
+    "angular": "1.3.8"
+  }
+}
