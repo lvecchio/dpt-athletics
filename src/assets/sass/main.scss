@@ -2,19 +2,19 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,400,500,700);
 @import url(http://fonts.googleapis.com/css?family=Dosis:400,600);
 
-// import variables
-@import 'var';
+// import vars
+@import "var";
 
+// import compass mixins
 @import "compass/css3";
-@import '../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 
-// import components
-@import 'ui';
+// import global
+@import "global";
 
-// import layout
-@import 'layout';
+// import directives
+@import "directives/sidebar";
+@import "directives/header";
 
 // import states
-@import 'states';
-
+@import "states/login";
 

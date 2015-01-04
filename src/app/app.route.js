@@ -11,16 +11,28 @@ function config ($stateProvider, $urlRouterProvider) {
 
   // Setup states
   $stateProvider
+    .state('login', {
+      url: '/login',
+      controller: 'LoginController as login',
+      templateUrl: 'app/states/login/loginView.html'
+    })
+    .state('register', {
+      url: '/register',
+      controller: 'RegisterController as register',
+      templateUrl: 'app/states/register/registerView.html'
+    })
     .state('dashboard', {
       url: '/dashboard',
       controller: 'DashboardController as dashboard',
       templateUrl: 'app/states/dashboard/dashboardView.html'
     })
     .state('measurements', {
-      url: '/measurements'
+      url: '/measurements',
+      templateUrl: 'app/states/measurements/measurementsView.html'
     })
     .state('goals', {
-      url: '/goals'
+      url: '/goals',
+      templateUrl: 'app/states/goals/goalsView.html'
     })
 }
 

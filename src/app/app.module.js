@@ -13,7 +13,9 @@ angular.module('app', [
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'ui.bootstrap'
-  ]);
+    'mobile-angular-ui',
+    'firebase'
+  ])
+  .constant('FIREBASE_URL', 'https://durbrow-performance.firebaseio.com/');
 
 

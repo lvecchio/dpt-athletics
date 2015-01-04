@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto";
+  color: $color-gray;
+}
+
+a {
+  color: $color-orange;
+  text-decoration: none;
+}
+.app-content {
+  background:url(../../assets/img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: transparent;
+}
