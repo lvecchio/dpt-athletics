@@ -28,6 +28,7 @@ function config ($stateProvider, $urlRouterProvider) {
     })
     .state('measurements', {
       url: '/measurements',
+      controller: 'MeasurementsController as measurements',
       templateUrl: 'app/states/measurements/measurementsView.html'
     })
     .state('goals', {
