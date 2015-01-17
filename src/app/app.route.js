@@ -7,7 +7,7 @@
  */
 function config ($stateProvider, $urlRouterProvider) {
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/dashboard");
+  $urlRouterProvider.otherwise("/login");
 
   // Setup states
   $stateProvider
@@ -20,6 +20,11 @@ function config ($stateProvider, $urlRouterProvider) {
       url: '/register',
       controller: 'RegisterController as register',
       templateUrl: 'app/states/register/registerView.html'
+    })
+    .state('profile', {
+      url: '/profile',
+      controller: 'ProfileController as profile',
+      templateUrl: 'app/states/profile/profileView.html'
     })
     .state('dashboard', {
       url: '/dashboard',

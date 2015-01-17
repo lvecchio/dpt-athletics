@@ -1,0 +1,64 @@
+<!-- begin: sidebars -->
+<dpt-sidebar-left class="sidebar sidebar-left"></dpt-sidebar-left>
+<dpt-sidebar-right class="sidebar sidebar-right"></dpt-sidebar-right>
+<!-- end: sidebars -->
+
+<!-- begin: main app container  -->
+<div class="app">
+
+  <!-- begin: header -->
+  <dpt-header></dpt-header>
+  <!-- end: header -->
+
+  <!-- begin: app-body -->
+  <div class="app-body" ng-class="{loading: loading}">
+    <div ng-show="loading" class="app-content-loading">
+      <i class="fa fa-spinner fa-spin loading-spinner"></i>
+    </div>
+
+    <!-- begin: app-content (all HTML for the state should go here) -->
+    <div class="app-content">
+      <!-- begin: profile -->
+      <div class="profile">
+        <div class="section">
+
+          <form role="form" ng-submit='profile.saveData()'>
+            <fieldset>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" ng-model="profile.email" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" ng-model="profile.firstName" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" ng-model="profile.lastName" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Age</label>
+                <input type="text" ng-model="profile.age" class="form-control">
+              </div>
+
+            </fieldset>
+            <hr>
+
+            <button class="btn btn-primary btn-block">Save</button>
+
+          </form>
+
+        </div>
+      </div>
+      <!-- end: profile -->
+    </div>
+    <!-- end: app-content -->
+
+  </div>
+  <!-- end: app-body -->
+
+</div>
+<!-- end: main app container -->
