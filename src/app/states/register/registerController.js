@@ -31,7 +31,6 @@ function RegisterController($firebase, $firebaseAuth, FIREBASE_URL, $state) {
 
       // create user record with uid & email
       var newUser = {
-        uid: authData.uid,
         email: authData.password.email
       };
 
