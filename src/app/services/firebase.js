@@ -14,6 +14,25 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL) {
   FirebaseService.authObj = $firebaseAuth(FirebaseService.ref);
 
   /**
+   * @name login
+   * @desc Login user with firebase credentials
+   * @param {string} email - Email entered in Login controller
+   * @param {password} password - Password entered in Login controller
+   */
+  FirebaseService.login = function (email, password) {
+
+    FirebaseService.authObj.$authWithPassword({
+      email: email,
+      password: password
+    }).then(function(authData){
+      console.log('Logged in as: ', authData.password.email);
+    }).catch(function(error){
+      console.error('Authentication failed: ', error);
+    });
+
+  };
+
+  /**
    * @name createUser
    * @desc Creates new user in "users" object in Firebase
    * @param {string} email - User's email to create account with
