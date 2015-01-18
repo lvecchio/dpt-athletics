@@ -5,12 +5,14 @@
  * @desc Controller for the dashboard screen.
  * @doc https://github.com/toddmotto/angularjs-styleguide#controllers
  */
-function DashboardController() {
+function DashboardController(FirebaseService) {
 
   // create reference to view model
   var dashboard = this;
 
   dashboard.title = "dashboard view";
+  dashboard.user = FirebaseService.resolveUser().uid;
+
 
   /**
    * @name doSomething
@@ -20,7 +22,7 @@ function DashboardController() {
    * @returns {Number}
    */
   dashboard.doSomething = function (x, y) {
-    return x * y;
+
   };
 
 

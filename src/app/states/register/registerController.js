@@ -13,13 +13,20 @@ function RegisterController(FirebaseService, $state) {
   // registerUser method
   register.registerUser = function() {
 
-    FirebaseService.createUser(register.email, register.password);
+    // create user object
+    var user = {
+      email: register.email,
+      password: register.password
+    }
 
-    // switch to dashboard state
-    $state.go('dashboard');
-
-  }
-
+    FirebaseService.createUser(user).then(function() {
+      return FirebaseService.login(user); // log in the new user
+    }).then(function(authData) {
+      console.log("Logged in as: " + authData.uid);
+      console.log(authData);
+      return FirebaseService.createProfile(user, authData); // create a profile w/ our user
+    });
+  };
 }
 
 // resolve

@@ -5,44 +5,16 @@
  * @desc Controller for the profile screen.
  * @doc https://github.com/toddmotto/angularjs-styleguide#controllers
  */
-function ProfileController($firebase, $firebaseAuth, FIREBASE_URL, $state) {
+function ProfileController(FirebaseService, $state) {
 
   // create reference to view model
   var profile = this;
 
-  // create firebase references
-  profile.ref = new Firebase(FIREBASE_URL);
-  profile.authObj = $firebaseAuth(profile.ref);
+  // get user id
+  profile.uid = FirebaseService.resolveUser().uid;
 
-  // check authentication state of user
-  profile.authData = profile.authObj.$getAuth();
-
-  // find user in users table
-  profile.firebaseUser = $firebase(profile.ref.child('users').child(profile.authData.uid));
-
-  console.log(profile.firebaseUser);
-
-  if(profile.user){
-    profile.email = profile.firebaseUser.email;
-    profile.firstName = profile.firebaseUser.firstName;
-    profile.lastName = profile.firebaseUser.lastName;
-    profile.age = profile.firebaseUser.age;
-  }
-
-  // save updated profile information
-  profile.saveData = function() {
-    var updatedData = {
-      email: profile.email,
-      firstName: profile.firstName,
-      lastName: profile.lastName,
-      age: profile.age
-    }
-
-    // store user data in profile object
-    var profileRef = $firebase(profile.ref.child('users').child(profile.authData.uid));
-    profileRef.$set(updatedData);
-
-  }
+  // get current user's profile
+  console.log(FirebaseService.getProfile());
 
 
 }

@@ -12,10 +12,22 @@ function LoginController(FirebaseService, $state) {
 
   // signIn method
   login.signIn = function() {
-    FirebaseService.login(login.email, login.password);
 
-    // switch to dashboard state
-    $state.go('dashboard');
+    // create user object with login information
+    var user = {
+      email: login.email,
+      password: login.password
+    }
+
+    FirebaseService.login(user).then(function(authData){
+      console.log('Logged in as: ', authData.password.email);
+      // switch to dashboard state
+      $state.go('dashboard');
+
+    }).catch(function(error){
+      console.error('Authentication failed: ', error);
+    });
+
   }
 
   // register method
