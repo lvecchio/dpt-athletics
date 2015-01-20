@@ -20,7 +20,8 @@
     <div class="app-content">
       {{ measurements.page }}
 
-      <dpt-file-upload></dpt-file-upload>
+      <!--<dpt-file-upload></dpt-file-upload>-->
+      <input type="file" on-read-file="displayContent($fileContent)"/>
 
     </div>
     <!-- end: app-content -->
