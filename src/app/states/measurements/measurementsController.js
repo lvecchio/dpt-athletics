@@ -1,14 +1,15 @@
 'use strict';
 
 
-function MeasurementsController ($scope) {
+function MeasurementsController ($scope, xmlParser) {
   var vm = this;
 
-  this.page = 'Measurements Controller';
-  $scope.showContent = function($fileContent){
-    $scope.content = $fileContent;
-    console.log($fileContent);
+  vm.page = 'Measurements Controller';
+  $scope.convertXML = function($fileContent){
+    $scope.result = xmlParser.xml_str2json($fileContent);
+    console.log($scope.result);
   };
+
 }
 
 angular.module('app').controller('MeasurementsController', MeasurementsController);

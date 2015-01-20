@@ -21,7 +21,24 @@
       {{ measurements.page }}
 
       <!--<dpt-file-upload></dpt-file-upload>-->
-      <input type="file" on-read-file="displayContent($fileContent)"/>
+      <input type="file" on-read-file="convertXML($fileContent)"/>
+
+      <div class="col-md-10">
+        <table class="table table-striped" >
+          <thead>
+          <th>Name</th>
+          <th>Body Fat</th>
+          </thead>
+          <tbody>
+          <tr ng-repeat="x in measurements.result.newDataSet.Table">
+            <td>{{  x.FirstName }} {{ x.LastName }}</td>
+            <td>{{ x.BF }} </td>
+
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
 
     </div>
     <!-- end: app-content -->
