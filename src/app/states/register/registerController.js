@@ -5,48 +5,28 @@
  * @desc Controller for the register screen.
  * @doc https://github.com/toddmotto/angularjs-styleguide#controllers
  */
-function RegisterController($firebase, $firebaseAuth, FIREBASE_URL, $state) {
+function RegisterController(FirebaseService, $state) {
 
   // create reference to view model
   var register = this;
 
-  // create firebase references
-  register.ref = new Firebase(FIREBASE_URL);
-  register.authObj = $firebaseAuth(register.ref);
+  // registerUser method
+  register.registerUser = function() {
 
-  // createUser method
-  register.createUser = function() {
+    // create user object
+    var user = {
+      email: register.email,
+      password: register.password
+    }
 
-    register.authObj.$createUser(register.email, register.password).then(function(){
-      console.log("User created successfully");
-
-      return register.authObj.$authWithPassword({
-        email: register.email,
-        password: register.password
-      });
-
-    }).then(function(authData){
-      console.log("Logged in as: ", authData.uid);
+    FirebaseService.createUser(user).then(function() {
+      return FirebaseService.login(user); // log in the new user
+    }).then(function(authData) {
+      console.log("Logged in as: " + authData.uid);
       console.log(authData);
-
-      // create user record with uid & email
-      var newUser = {
-        email: authData.password.email
-      };
-
-      // store user data in profile object
-      var profileRef = $firebase(register.ref.child('users'));
-      profileRef.$set(authData.uid, newUser);
-
-    }).catch(function(error) {
-      console.log("Error: ", error);
+      return FirebaseService.createProfile(user, authData); // create a profile w/ our user
     });
-
-    // switch to dashboard state
-    $state.go('dashboard');
-
-  }
-
+  };
 }
 
 // resolve

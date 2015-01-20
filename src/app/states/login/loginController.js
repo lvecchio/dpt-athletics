@@ -5,29 +5,29 @@
  * @desc Controller for the login screen.
  * @doc https://github.com/toddmotto/angularjs-styleguide#controllers
  */
-function LoginController($firebase, $firebaseAuth, FIREBASE_URL, $state) {
+function LoginController(FirebaseService, $state) {
 
   // create reference to view model
   var login = this;
 
-  // create firebase references
-  login.ref = new Firebase(FIREBASE_URL);
-  login.authObj = $firebaseAuth(login.ref);
-
   // signIn method
   login.signIn = function() {
-    login.authObj.$authWithPassword({
+
+    // create user object with login information
+    var user = {
       email: login.email,
       password: login.password
-    }).then(function(authData){
-      console.log('Logged in as: ', authData.password.email);
+    }
 
+    FirebaseService.login(user).then(function(authData){
+      console.log('Logged in as: ', authData.password.email);
       // switch to dashboard state
       $state.go('dashboard');
 
     }).catch(function(error){
       console.error('Authentication failed: ', error);
     });
+
   }
 
   // register method
