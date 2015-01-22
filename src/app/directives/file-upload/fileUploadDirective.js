@@ -13,7 +13,6 @@ function onReadFile($parse) {
 
   return {
     restrict   : 'A',
-    //templateUrl: '/app/directives/file-upload/fileUploadView.html',
     scope: false,
     link: function(scope, elem, attrs) {
       var fn = $parse(attrs.onReadFile);

@@ -1,18 +1,18 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,400,500,700);
 @import url(http://fonts.googleapis.com/css?family=Dosis:400,600);
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/_global\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\000031}}
 body {
   font-family: "Roboto";
   color: #33363C;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/_global\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\000036}}
 a {
   color: #FF3F40;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/_global\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\0000310}}
 .app-content {
   background: url(../../assets/img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -22,42 +22,51 @@ a {
   background-color: transparent;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\0000319}}
+.card {
+  background: white;
+  margin: 20px 30px;
+  opacity: 0.95;
+  border-radius: 0.5em;
+  padding-top: 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000031}}
 .sidebar {
   background-color: #22262B;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000034}}
 .sidebar .app-name {
   background-color: #FFFFFF;
   border-bottom: 1px solid #22262B;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000038}}
 .sidebar .app-name .logo {
   width: 60%;
   margin: 0px 0px 0px 45px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\0000315}}
 .sidebar .list-group-item {
   text-transform: uppercase;
   font-size: 1.1em;
   font-weight: 400;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\0000321}}
 .sidebar .list-group-item.active {
   background-color: #FF3F40;
   border-color: #FF3F40;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/directives\/_header\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_header\.scss}line{font-family:\000031}}
 .navbar {
   background-color: #FFFFFF;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/directives\/_header\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_header\.scss}line{font-family:\000035}}
 .navbar .navbar-brand {
   color: #FF3F40;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/states\/_login\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/states\/_login\.scss}line{font-family:\000031}}
 .login {
   width: 50%;
 }

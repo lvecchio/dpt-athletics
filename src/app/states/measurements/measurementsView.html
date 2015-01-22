@@ -17,28 +17,28 @@
     </div>
 
     <!-- begin: app-content (all HTML for the state should go here) -->
-    <div class="app-content">
-      {{ measurements.page }}
+    <div class="app-content container">
+      <div class="row">
+        <div class="col-md-10 col-lg-10 col-sm-10 card">
+          {{ measurements.page }}
 
-      <!--<dpt-file-upload></dpt-file-upload>-->
-      <input type="file" on-read-file="convertXML($fileContent)"/>
+          <input type="file" on-read-file="convertXML($fileContent)"/>
 
-      <div class="col-md-10">
-        <table class="table table-striped" >
-          <thead>
-          <th>Name</th>
-          <th>Body Fat</th>
-          </thead>
-          <tbody>
-          <tr ng-repeat="x in measurements.result.newDataSet.Table">
-            <td>{{  x.FirstName }} {{ x.LastName }}</td>
-            <td>{{ x.BF }} </td>
+          <table class="table table-striped" >
+            <thead>
+            <th>Name</th>
+            <th>Body Fat</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="athlete in measurements.result">
+              <td>{{  athlete.FirstName }} {{ athlete.LastName }}</td>
+              <td>{{ athlete.BF }} </td>
 
-          </tr>
-          </tbody>
-        </table>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
 
     </div>
     <!-- end: app-content -->
