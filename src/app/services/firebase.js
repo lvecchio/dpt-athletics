@@ -96,6 +96,17 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL) {
     return user.$set(profile);
   };
 
+  FirebaseService.findUserByName = function (user) {
+    console.log('Athlete passed into service: ');
+    console.dir(user);
+
+    ref.child('users').once('value', function(userPathSnapshot) {
+      userPathSnapshot.forEach(function (userSnap) {
+        console.log(userSnap.val());
+      });
+    })
+  };
+
   FirebaseService.getProfile = function(uid) {
     return data;
   };

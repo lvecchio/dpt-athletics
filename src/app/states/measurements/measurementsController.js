@@ -1,7 +1,7 @@
 'use strict';
 
 
-function MeasurementsController ($scope, xmlParser) {
+function MeasurementsController ($scope, xmlParser, FirebaseService) {
 
   var vm = this;
   vm.page = 'Measurements Controller';
@@ -14,6 +14,23 @@ function MeasurementsController ($scope, xmlParser) {
     vm.result = $scope.result.newDataSet.Table;
   };
 
+  vm.lookupAthlete = function(x) {
+    console.log('look up athlete');
+    FirebaseService.findUserByName(x);
+  }
 }
 
+// ALGORITHM TO FILTER
+
 angular.module('app').controller('MeasurementsController', MeasurementsController);
+
+
+
+/*
+
+Given a dataset (json object)
+
+For each athlete in the data set
+if athlete.FirstName + athlete.LastName matches user.FirstName + user.LastName
+associate measurement record with user_measurement in FireBase
+ */

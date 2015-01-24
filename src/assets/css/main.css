@@ -31,6 +31,12 @@ a {
   padding-top: 10px;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\0000327}}
+.card--measurements {
+  overflow: scroll;
+  height: 500px;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000031}}
 .sidebar {
   background-color: #22262B;

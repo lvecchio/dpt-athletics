@@ -19,21 +19,22 @@
     <!-- begin: app-content (all HTML for the state should go here) -->
     <div class="app-content container">
       <div class="row">
-        <div class="col-md-10 col-lg-10 col-sm-10 card">
+        <div class="col-md-10 col-lg-10 col-sm-10 card card--measurements">
           {{ measurements.page }}
 
           <input type="file" on-read-file="convertXML($fileContent)"/>
 
-          <table class="table table-striped" >
+          <table class="table table-striped">
             <thead>
             <th>Name</th>
             <th>Body Fat</th>
+            <th>Actions</th>
             </thead>
             <tbody>
             <tr ng-repeat="athlete in measurements.result">
               <td>{{  athlete.FirstName }} {{ athlete.LastName }}</td>
               <td>{{ athlete.BF }} </td>
-
+              <td><a ng-click="measurements.lookupAthlete(athlete)">lookup athlete</a></td>
             </tr>
             </tbody>
           </table>

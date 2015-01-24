@@ -17,14 +17,14 @@ function onReadFile($parse) {
     link: function(scope, elem, attrs) {
       var fn = $parse(attrs.onReadFile);
       elem.on('change', function(onChangeEvent) {
-        var reader = new FileReader();
 
+        // use HTML5 FileReader API
+        var reader = new FileReader();
         reader.onload = function(onLoadEvent) {
           scope.$apply(function() {
             fn(scope, {$fileContent:onLoadEvent.target.result});
           });
         };
-        //reader.readAsText((onChangeEvent.srcElement || onChangeEvent.target).files[0]);
         reader.readAsText(onChangeEvent.target.files[0]);
 
       });
