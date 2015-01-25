@@ -17,7 +17,7 @@ function LoginController(FirebaseService, $state) {
     var user = {
       email: login.email,
       password: login.password
-    }
+    };
 
     FirebaseService.login(user).then(function(authData){
       console.log('Logged in as: ', authData.password.email);
@@ -28,7 +28,7 @@ function LoginController(FirebaseService, $state) {
       console.error('Authentication failed: ', error);
     });
 
-  }
+  };
 
   // register method
   login.register = function () {

@@ -5,7 +5,7 @@
  * @desc Service for all Firebase logic
  * @doc https://github.com/toddmotto/angularjs-styleguide#services-and-factory
  */
-function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL) {
+function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, Measurement, $q) {
 
   var FirebaseService = {};
 
@@ -23,7 +23,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL) {
    * depending upon the provider used to authenticate - will be returned.
    * Otherwise, the return value will be null.
    */
-  FirebaseService.resolveUser = function() {
+  FirebaseService.resolveUser = function () {
     return authObject.$getAuth();
   };
 
@@ -39,7 +39,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL) {
   FirebaseService.login = function (user) {
     console.log(user);
     return authObject.$authWithPassword({
-      email: user.email,
+      email   : user.email,
       password: user.password
     });
   };
@@ -50,7 +50,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL) {
    * This method should be called when you want to log out the current user.
    * It takes no arguments and returns no value. When logout is called, the $onAuth() callback(s) will be fired.
    */
-  FirebaseService.logout = function() {
+  FirebaseService.logout = function () {
     return authObject.$unauth();
   };
 
@@ -83,14 +83,14 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL) {
    * entire $firebase path with the data provided. This is the equivalent of calling set(value) on a Firebase reference.
    * @param {object} user
    */
-  FirebaseService.createProfile = function(user, authData) {
+  FirebaseService.createProfile = function (user, authData) {
     var profile = {
-      email: user.email,
-      firstName: '',
-      lastName: '',
-      age: '',
+      email        : user.email,
+      firstName    : '',
+      lastName     : '',
+      age          : '',
       accountStatus: '',
-      fitnessLevel: ''
+      fitnessLevel : ''
     };
     var user = $firebase(ref.child('users').child(authData.uid));
     return user.$set(profile);
@@ -100,21 +100,31 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL) {
     console.log('Athlete passed into service: ');
     console.dir(user);
 
-    ref.child('users').once('value', function(userPathSnapshot) {
+    var defer = $q.defer();
+    ref.child('users').once('value', function (userPathSnapshot) {
       userPathSnapshot.forEach(function (userSnap) {
-        console.log(userSnap.val());
+        //console.log(userSnap.val().firstName + ' ' + userSnap.val().lastName);
+
+        // TODO: add a condition to check for Date
+        if ( user.FirstName === userSnap.val().firstName &&
+          user.LastName === userSnap.val().lastName) {
+
+          console.log('found a match!');
+          defer.resolve(userSnap);
+        }
+
       });
-    })
+    });
+    return defer.promise;
   };
 
-  FirebaseService.getProfile = function(uid) {
+  FirebaseService.getProfile = function (uid) {
     return data;
   };
 
   return FirebaseService;
 
 }
-
 
 
 // load controller

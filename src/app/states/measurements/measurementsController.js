@@ -1,7 +1,7 @@
 'use strict';
 
 
-function MeasurementsController ($scope, xmlParser, FirebaseService) {
+function MeasurementsController ($scope, xmlParser, FirebaseService, Measurement) {
 
   var vm = this;
   vm.page = 'Measurements Controller';
@@ -14,9 +14,14 @@ function MeasurementsController ($scope, xmlParser, FirebaseService) {
     vm.result = $scope.result.newDataSet.Table;
   };
 
-  vm.lookupAthlete = function(x) {
+  vm.lookupAthlete = function(athlete) {
     console.log('look up athlete');
-    FirebaseService.findUserByName(x);
+    FirebaseService.findUserByName(athlete).then(function (user) {
+
+      Measurement.create(athlete, user.key()).then(function (){
+        console.log('measurement created');
+      });
+    });
   }
 }
 
