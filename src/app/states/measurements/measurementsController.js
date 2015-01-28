@@ -15,27 +15,13 @@ function MeasurementsController ($scope, xmlParser, FirebaseService, Measurement
   };
 
   vm.lookupAthlete = function(athlete) {
-    console.log('look up athlete');
-    FirebaseService.findUserByName(athlete).then(function (user) {
 
+    FirebaseService.findUserByName(athlete).then(function (user) {
       Measurement.create(athlete, user.key()).then(function (){
         console.log('measurement created');
       });
     });
-  }
+  };
 }
 
-// ALGORITHM TO FILTER
-
 angular.module('app').controller('MeasurementsController', MeasurementsController);
-
-
-
-/*
-
-Given a dataset (json object)
-
-For each athlete in the data set
-if athlete.FirstName + athlete.LastName matches user.FirstName + user.LastName
-associate measurement record with user_measurement in FireBase
- */
