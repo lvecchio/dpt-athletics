@@ -21,7 +21,9 @@ function MeasurementsController ($scope, xmlParser, FirebaseService, Measurement
         console.log('measurement created');
       });
     });
-  };
-}
+  }
+};
 
 angular.module('app').controller('MeasurementsController', MeasurementsController);
+
+

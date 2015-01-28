@@ -27,13 +27,23 @@
           <table class="table table-striped">
             <thead>
             <th>Name</th>
+            <th>Date</th>
             <th>Body Fat</th>
+            <th>Chest</th>
+            <th>Hips</th>
+            <th>Tricep</th>
+            <th>Waist</th>
             <th>Actions</th>
             </thead>
             <tbody>
             <tr ng-repeat="athlete in measurements.result">
               <td>{{  athlete.FirstName }} {{ athlete.LastName }}</td>
+              <td>{{  athlete.Date }}</td>
               <td>{{ athlete.BF }} </td>
+              <td>{{ athlete.CH }}</td>
+              <td>{{ athlete.HI }}</td>
+              <td>{{ athlete.TR }}</td>
+              <td>{{ athlete.WA }}</td>
               <td><a ng-click="measurements.lookupAthlete(athlete)">lookup athlete</a></td>
             </tr>
             </tbody>

@@ -4,6 +4,7 @@
 'use strict';
 
 function Measurement($firebase, FIREBASE_URL) {
+
   var ref = new Firebase(FIREBASE_URL);
   var measurements = $firebase(ref.child('measurements')).$asArray();
 
@@ -19,7 +20,7 @@ function Measurement($firebase, FIREBASE_URL) {
         // easily query which measurements belong to a specific user
         .then(function(measurementRef){
 
-          // 1. create 'user_measurements'
+          // 1. create or reference 'user_measurements'
           $firebase(ref.child('user_measurements')
 
             // 2. create a child with the user's simpleloginid
