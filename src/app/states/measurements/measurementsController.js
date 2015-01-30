@@ -8,6 +8,7 @@ function MeasurementsController ($scope, xmlParser, FirebaseService, Measurement
   vm.result = {};
 
   // TODO: cleanup this function -- look into better alternative to scope.$apply
+
   // in fileUploadDirective
   $scope.convertXML = function($fileContent){
     $scope.result = xmlParser.xml_str2json($fileContent);
@@ -16,11 +17,19 @@ function MeasurementsController ($scope, xmlParser, FirebaseService, Measurement
 
   vm.lookupAthlete = function(athlete) {
 
-    FirebaseService.findUserByName(athlete).then(function (user) {
-      Measurement.create(athlete, user.key()).then(function (){
-        console.log('measurement created');
+    FirebaseService.findUserByName(athlete)
+      .then(function (user) {
+        return user;
+      })
+      .then(function(user) {
+        console.log(user);
+        console.log(user.key());
+        console.log(user.val());
+        Measurement.create(athlete, user.key());
+      })
+      .then(null, function(error) {
+        console.error(error);
       });
-    });
   }
 };
 

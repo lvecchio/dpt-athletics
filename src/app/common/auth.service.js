@@ -1,13 +1,18 @@
+/**
+ * Created by a545703 on 1/28/15.
+ */
+
 'use strict';
 
+
 /**
- * @name FirebaseService
+ * @name Auth
  * @desc Service for all Firebase logic
  * @doc https://github.com/toddmotto/angularjs-styleguide#services-and-factory
  */
-function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
+function AuthFactory ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
 
-  var FirebaseService = {};
+  var Auth = {};
 
   // create firebase references
   var ref = new Firebase(FIREBASE_URL);
@@ -23,7 +28,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
    * depending upon the provider used to authenticate - will be returned.
    * Otherwise, the return value will be null.
    */
-  FirebaseService.resolveUser = function () {
+  Auth.resolveUser = function () {
     return authObject.$getAuth();
   };
 
@@ -36,7 +41,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
    * @param {string} email
    * @param {password} password
    */
-  FirebaseService.login = function (user) {
+  Auth.login = function (user) {
     console.log(user);
     return authObject.$authWithPassword({
       email   : user.email,
@@ -50,7 +55,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
    * This method should be called when you want to log out the current user.
    * It takes no arguments and returns no value. When logout is called, the $onAuth() callback(s) will be fired.
    */
-  FirebaseService.logout = function () {
+  Auth.logout = function () {
     return authObject.$unauth();
   };
 
@@ -61,7 +66,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
    * user data about the created user. Currently, the object only contains the created user’s uid.
    * @param {object} user
    */
-  FirebaseService.createUser = function (user) {
+  Auth.createUser = function (user) {
     return authObject.$createUser(user.email, user.password);
   };
 
@@ -72,7 +77,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
    * has been successfully removed on the Firebase servers.
    * @param {object} user
    */
-  FirebaseService.removeUser = function (user) {
+  Auth.removeUser = function (user) {
     return authObject.$removeUser(user.email, user.password);
   };
 
@@ -83,7 +88,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
    * entire $firebase path with the data provided. This is the equivalent of calling set(value) on a Firebase reference.
    * @param {object} user
    */
-  FirebaseService.createProfile = function (user, authData) {
+  Auth.createProfile = function (user, authData) {
     var profile = {
       email        : user.email,
       firstName    : '',
@@ -97,9 +102,7 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
   };
 
   // TODO: Refactor this service
-  FirebaseService.findUserByName = function (user) {
-    console.log('Athlete passed into service: ');
-    console.dir(user);
+  Auth.findUserByName = function (user) {
 
     var defer = $q.defer();
     ref.child('users').once('value', function (userPathSnapshot) {
@@ -117,14 +120,14 @@ function FirebaseService ($firebase, $firebaseAuth, FIREBASE_URL, $q) {
     return defer.promise;
   };
 
-  FirebaseService.getProfile = function (uid) {
+  Auth.getProfile = function (uid) {
     return data;
   };
 
-  return FirebaseService;
+  return Auth;
 
 }
 
 
 // load controller
-angular.module('app').factory('FirebaseService', FirebaseService);
+angular.module('app').factory('AuthFactory', AuthFactory);

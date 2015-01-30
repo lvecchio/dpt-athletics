@@ -12,6 +12,9 @@ function Measurement($firebase, FIREBASE_URL) {
     all: measurements,
     create: function(measurement, userUID) {
 
+      console.log(userUID);
+
+
       // add measurement to the measurement 'table' (child) in
       // firebase.
       return measurements.$add(measurement)

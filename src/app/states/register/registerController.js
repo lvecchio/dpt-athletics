@@ -17,7 +17,7 @@ function RegisterController(FirebaseService, $state) {
     var user = {
       email: register.email,
       password: register.password
-    }
+    };
 
     FirebaseService.createUser(user).then(function() {
       return FirebaseService.login(user); // log in the new user
@@ -32,7 +32,7 @@ function RegisterController(FirebaseService, $state) {
 // resolve
 RegisterController.resolve = {
 
-}
+};
 
 // load controller
 angular.module('app').controller('RegisterController', RegisterController);

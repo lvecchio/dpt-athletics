@@ -22,7 +22,7 @@ function ProfileController(FirebaseService, $state) {
 // resolve
 ProfileController.resolve = {
 
-}
+};
 
 // load controller
 angular.module('app').controller('ProfileController', ProfileController);

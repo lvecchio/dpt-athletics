@@ -31,7 +31,7 @@ function DashboardController(FirebaseService) {
 // resolve
 DashboardController.resolve = {
 
-}
+};
 
 // load controller
 angular.module('app').controller('DashboardController', DashboardController);

@@ -40,7 +40,7 @@ function LoginController(FirebaseService, $state) {
 // resolve
 LoginController.resolve = {
 
-}
+};
 
 // load controller
 angular.module('app').controller('LoginController', LoginController);
