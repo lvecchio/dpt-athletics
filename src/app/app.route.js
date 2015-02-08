@@ -46,10 +46,10 @@
         controller: 'Profile as vm',
         templateUrl: 'app/users/profile.html'
       })
-      //.state('goals', {
-      //  url: '/goals',
-      //  templateUrl: 'app/states/goals/goalsView.html'
-      //})
+      .state('base.goals', {
+        url: '/goals',
+        templateUrl: 'app/goals/goals.html'
+      })
 
   }
 

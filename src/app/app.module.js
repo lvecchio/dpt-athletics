@@ -13,12 +13,18 @@
     'app.core',
 
     /*
+     * Cross-module directives here
+     */
+    'app.widgets',
+
+    /*
      * Feature Areas
      */
     'app.layout',
     'app.users',
     'app.dashboard',
-    'app.measurements'
+    'app.measurements',
+    'app.goals'
 
     //'app.exercises',
     //'app.measurements',
