@@ -61,6 +61,13 @@
       margin-right: 15px;
     }
 
+    .icon-number {
+      float: right;
+      background-color: $color-orange;
+      color: $color-white;
+      font-size: 13px;
+    }
+
     &:hover {
       background-color: $color-light-grey;
       color: $color-white;
@@ -76,6 +83,32 @@
       color: $color-white;
     }
 
+  }
+
+  .sidebar__footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: #2d3037;
+    width: 100%;
+    z-index: 1000;
+    min-height: 65px;
+
+    .sidebar__footerRight,
+    .sidebar__divider,
+    .sidebar__footerLeft {
+      float: left;
+      font-size: 25px;
+      line-height: 65px;
+    }
+    .sidebar__footerRight,
+    .sidebar__footerLeft {
+      width: 49%;
+      text-align: center;
+    }
+
+    .sidebar__divider {
+      color: #000000;
+    }
   }
 
 }

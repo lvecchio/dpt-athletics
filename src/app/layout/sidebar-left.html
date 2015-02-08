@@ -10,10 +10,45 @@
     </div>
     <div class="list-group" ui-turn-off='uiSidebarLeft'>
       <div class="list-group-header">Main</div>
-      <a class="list-group-item" ui-sref="base.dashboard" ui-sref-active="active">Dashboard <i class="fa fa-dashboard pull-left"></i></a>
-      <a class="list-group-item" ui-sref="base.measurements" ui-sref-active="active">Measurements <i class="fa fa-bar-chart-o pull-left"></i></a>
-      <a class="list-group-item" ui-sref="base.goals" ui-sref-active="active">Goals <i class="fa fa-tasks pull-left"></i></a>
-      <a class="list-group-item" ui-sref="base.profile" ui-sref-active="active">Profile <i class="fa fa-user pull-left"></i></a>
+      <a class="list-group-item" ui-sref="base.dashboard" ui-sref-active="active">
+        Dashboard <i class="fa fa-dashboard pull-left"></i>
+        <!-- TODO: Add "icon-number" span to nav items if there is an update from Firebase -->
+        <span class="icon-number">2</span>
+      </a>
+      <a class="list-group-item" ui-sref="base.measurements" ui-sref-active="active">
+        Measurements <i class="fa fa-bar-chart-o pull-left"></i>
+      </a>
+      <a class="list-group-item" ui-sref="base.goals" ui-sref-active="active">
+        Goals <i class="fa fa-tasks pull-left"></i>
+      </a>
+      <a class="list-group-item" ui-sref="base.profile" ui-sref-active="active">
+        Profile <i class="fa fa-user pull-left"></i>
+      </a>
     </div>
+
+    <!-- TODO: Only show this group if user is a trainer or admin -->
+    <div class="list-group" ui-turn-off='uiSidebarLeft'>
+      <div class="list-group-header">Admin</div>
+      <a class="list-group-item" ui-sref-active="active">
+        In the red <i class="fa fa-dashboard pull-left"></i>
+      </a>
+      <a class="list-group-item" ui-sref-active="active">
+        View all clients <i class="fa fa-user pull-left"></i>
+      </a>
+      <a class="list-group-item" ui-sref-active="active">
+        Upload Measurements <i class="fa fa-bar-chart-o pull-left"></i>
+      </a>
+      <a class="list-group-item" ui-sref-active="active">
+        Manage News <i class="fa fa-bar-chart-o pull-left"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="sidebar__footer">
+    <!-- TODO: Add "ask a trainer a question" functionality to button -->
+    <div class="sidebar__footerRight"><i class="fa fa-question"></i></div>
+    <div class="sidebar__divider">|</div>
+    <!-- TODO: Sign out user upon click of icon -->
+    <div class="sidebar__footerLeft"><i class="fa fa-sign-out"></i></div>
   </div>
 </div>
