@@ -4,9 +4,6 @@
     .module('app.widgets')
     .directive('dptOnReadFile', onReadFile);
 
-  /**
-   * Created by a545703 on 1/17/15.
-   */
   'use strict';
 
   /**
@@ -39,6 +36,7 @@
       }
     }
   }
+
 })();
 
 
