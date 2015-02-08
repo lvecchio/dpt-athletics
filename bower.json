@@ -27,8 +27,7 @@
     "highcharts": "~4.0.4",
     "mobile-angular-ui": "~1.2.0-beta.11",
     "firebase": "~2.0.6",
-    "angularfire": "~0.9.0",
-    "angular-messages": "~1.3.12"
+    "angularfire": "~0.9.0"
   },
   "resolutions": {
     "angular": "1.3.8"

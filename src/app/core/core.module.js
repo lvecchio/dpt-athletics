@@ -10,7 +10,6 @@
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ngMessages',
     /*
      * 3rd Party Modules
      */
