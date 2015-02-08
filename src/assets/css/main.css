@@ -224,40 +224,53 @@
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\000031}}
 .signin {
-  width: 35%;
+  width: 90%;
   margin: 0 auto;
   background-color: rgba(235, 235, 235, 0.8);
   margin-top: 50px;
   padding: 30px;
   border-radius: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\000039}}
 .signin .signin__logo {
   margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000312}}
 .signin .signin__logo img {
   display: block;
   width: 45%;
   margin: 0 auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000321}}
 .signin .signin__form .input {
   max-width: 100%;
   width: 100%;
   margin: 0 auto 25px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000326}}
 .signin .signin__form .input .input__field {
   text-transform: uppercase;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000331}}
 .signin .signin__form .signin__button {
   width: 100%;
   margin: 0 auto;
   height: 43px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000339}}
 .signin .signin__register {
   margin-top: 25px;
+}
+
+@media screen and (min-width: 800px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000346}}
+  .signin {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1000px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000352}}
+  .signin {
+    width: 45%;
+  }
 }
