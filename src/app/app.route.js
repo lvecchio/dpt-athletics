@@ -25,16 +25,6 @@
         controller: 'Register as vm',
         templateUrl: 'app/users/register.html'
       })
-      //.state('login', {
-      //  url: '/login',
-      //  controller: 'LoginController as login',
-      //  templateUrl: 'app/states/login/loginView.html'
-      //})
-      //.state('register', {
-      //  url: '/register',
-      //  controller: 'RegisterController as register',
-      //  templateUrl: 'app/states/register/registerView.html'
-      //})
       .state('profile', {
         url: '/profile',
         controller: 'ProfileController as profile',
@@ -47,13 +37,13 @@
       })
       .state('measurements', {
         url: '/measurements',
-        controller: 'MeasurementsController as measurements',
-        templateUrl: 'app/states/measurements/measurementsView.html'
+        controller: 'Measurements as vm',
+        templateUrl: 'app/measurements/measurements.html'
       })
-      .state('goals', {
-        url: '/goals',
-        templateUrl: 'app/states/goals/goalsView.html'
-      })
+      //.state('goals', {
+      //  url: '/goals',
+      //  templateUrl: 'app/states/goals/goalsView.html'
+      //})
   }
 
 
