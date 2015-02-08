@@ -1,7 +1,36 @@
 <!-- begin: sidebars -->
-<dpt-sidebar-left class="sidebar sidebar-left"></dpt-sidebar-left>
-<dpt-sidebar-right class="sidebar sidebar-right"></dpt-sidebar-right>
+<ng-include src="'app/layout/sidebar-left.html'" class="sidebar sidebar-left"></ng-include>
+<ng-include src="'app/layout/sidebar-right.html'" class="sidebar sidebar-right"></ng-include>
 <!-- end: sidebars -->
-<p>Welcome to the SHELL!!!</p>
 
-<ui-view></ui-view>
+<!-- begin: main app container -->
+<div class="app">
+
+  <!-- begin: include header -->
+  <ng-include src="'app/layout/header.html'"></ng-include>
+  <!-- end: include header -->
+
+  <!-- begin: app-body -->
+  <div class="app-body" ng-class="{loading: loading}">
+    <div ng-show="loading" class="app-content-loading">
+      <i class="fa fa-spinner fa-spin loading-spinner"></i>
+    </div>
+
+    <!-- begin: app-content (all HTML for the state should go here) -->
+    <div class="app-content">
+
+      <!-- begin: load all pages within 'base' abstract state here -->
+      <ui-view></ui-view>
+      <!-- end: load all pages within 'base' abstract state here -->
+
+    </div>
+    <!-- end: app-content -->
+
+  </div>
+  <!-- end: app-body -->
+
+
+</div>
+<!-- end: main app container -->
+
+

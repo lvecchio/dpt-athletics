@@ -25,17 +25,18 @@
         controller: 'Register as vm',
         templateUrl: 'app/users/register.html'
       })
-      .state('profile', {
-        url: '/profile',
-        controller: 'ProfileController as profile',
-        templateUrl: 'app/states/profile/profileView.html'
+      .state('base', {
+        abstract: true,
+        url: '/base',
+        templateUrl: 'app/layout/shell.html',
+        controller: 'Shell as vm'
       })
-      .state('dashboard', {
+      .state('base.dashboard', {
         url: '/dashboard',
         controller: 'Dashboard as vm',
         templateUrl: 'app/dashboard/dashboard.html'
       })
-      .state('measurements', {
+      .state('base.measurements', {
         url: '/measurements',
         controller: 'Measurements as vm',
         templateUrl: 'app/measurements/measurements.html'
@@ -43,6 +44,16 @@
       //.state('goals', {
       //  url: '/goals',
       //  templateUrl: 'app/states/goals/goalsView.html'
+      //})
+      //.state('profile', {
+      //  url: '/profile',
+      //  controller: 'ProfileController as profile',
+      //  templateUrl: 'app/states/profile/profileView.html'
+      //})
+      //.state('dashboard', {
+      //  url: '/dashboard',
+      //  controller: 'Dashboard as vm',
+      //  templateUrl: 'app/dashboard/dashboard.html'
       //})
   }
 

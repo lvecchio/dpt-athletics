@@ -17,7 +17,8 @@
      */
     'app.users',
     'app.dashboard',
-    'app.measurements'
+    'app.measurements',
+    'app.layout'
     //'app.exercises',
     //'app.measurements',
     //'app.scheduling',

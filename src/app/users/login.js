@@ -24,7 +24,7 @@
       dataservice.login(user)
         .then(function (authData) {
           $log.debug('Logged in as: ', authData.password.email);
-          $state.go('dashboard');
+          $state.go('base.dashboard');
         })
         .catch(function (error) {
           $log.error('Authentication failed: ', error);
