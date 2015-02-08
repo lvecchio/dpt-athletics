@@ -1,0 +1,61 @@
+<!-- begin: sidebars -->
+<dpt-sidebar-left class="sidebar sidebar-left"></dpt-sidebar-left>
+<dpt-sidebar-right class="sidebar sidebar-right"></dpt-sidebar-right>
+<!-- end: sidebars -->
+
+<!-- begin: main app container  -->
+<div class="app">
+
+  <!-- begin: header -->
+  <dpt-header></dpt-header>
+  <!-- end: header -->
+
+  <!-- begin: app-body -->
+  <div class="app-body" ng-class="{loading: loading}">
+    <div ng-show="loading" class="app-content-loading">
+      <i class="fa fa-spinner fa-spin loading-spinner"></i>
+    </div>
+
+    <!-- begin: app-content (all HTML for the state should go here) -->
+    <div class="app-content container">
+      <div class="row">
+        <div class="col-md-10 col-lg-10 col-sm-10 card card--measurements">
+          {{ vm.page }}
+
+          <input type="file" on-read-file="convertXML($fileContent)"/>
+
+          <table class="table table-striped">
+            <thead>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Body Fat</th>
+            <th>Chest</th>
+            <th>Hips</th>
+            <th>Tricep</th>
+            <th>Waist</th>
+            <th>Actions</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="athlete in measurements.result">
+              <td>{{  athlete.FirstName }} {{ athlete.LastName }}</td>
+              <td>{{  athlete.Date }}</td>
+              <td>{{ athlete.BF }} </td>
+              <td>{{ athlete.CH }}</td>
+              <td>{{ athlete.HI }}</td>
+              <td>{{ athlete.TR }}</td>
+              <td>{{ athlete.WA }}</td>
+              <td><a ng-click="vm.lookupAthlete(athlete)">lookup athlete</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <!-- end: app-content -->
+
+  </div>
+  <!-- end: app-body -->
+
+</div>
+<!-- end: main app container -->

@@ -26,10 +26,6 @@
 
     return service;
 
-    function resolveUser() {
-      return authObject.$getAuth();
-    }
-
     function login(user) {
       return authObject.$authWithPassword({
         email   : user.email,
@@ -41,26 +37,16 @@
       return authObject.$unauth();
     }
 
+    function resolveUser() {
+      return authObject.$getAuth();
+    }
+
     function createUser(user) {
       return authObject.$createUser(user.email, user.password);
     }
 
     function removeUser(user) {
       return authObject.$removeUser(user.email, user.password);
-    }
-
-    function createProfile(user, authData) {
-      var profile = {
-        email        : user.email,
-        firstName    : '',
-        lastName     : '',
-        age          : '',
-        accountStatus: '',
-        fitnessLevel : ''
-      };
-      var user = $firebase(ref.child('users').child(authData.uid));
-
-      return user.$set(profile);
     }
 
     function findUserByName(user) {
@@ -83,6 +69,20 @@
       });
 
       return defer.promise;
+    }
+
+    function createProfile(user, authData) {
+      var profile = {
+        email        : user.email,
+        firstName    : '',
+        lastName     : '',
+        age          : '',
+        accountStatus: '',
+        fitnessLevel : ''
+      };
+      var user = $firebase(ref.child('users').child(authData.uid));
+
+      return user.$set(profile);
     }
 
   }
