@@ -13,31 +13,41 @@
       <!-- begin: login -->
       <div class="signin section">
 
-          <div class="signin__logo"><img src="../assets/img/logo.png" /></div>
+        <div class="signin__logo"><img src="../assets/img/logo.png" /></div>
 
-          <form role="form" ng-submit='vm.signIn()' class="signin__form">
+        <form novalidate name="form" ng-submit="vm.$valid && vm.signIn()" class="signin__form">
 
-            <span class="input input--hideo">
-              <input class="input__field input__field--hideo" type="text" id="email" ng-model="vm.email" placeholder="EMAIL">
-              <label class="input__label input__label--hideo" for="email">
-                <i class="fa fa-fw fa-envelope icon icon--hideo"></i>
-                <span class="input__label-content input__label-content--hideo">Email</span>
-              </label>
-            </span>
+          <!-- begin: email input -->
+          <div ng-show="form.$submitted || form.email.$touched">
+            <div ng-show="form.email.$error.required">Please enter your email address.</div>
+          </div>
+          <span class="input input--hideo">
+            <input class="input__field input__field--hideo" type="text" id="email" name="email" ng-model="vm.email" placeholder="EMAIL" required>
+            <label class="input__label input__label--hideo" for="email">
+              <i class="fa fa-fw fa-envelope icon icon--hideo"></i>
+              <span class="input__label-content input__label-content--hideo">Email</span>
+            </label>
+          </span>
+          <!-- end: email input -->
 
-            <span class="input input--hideo">
-              <input class="input__field input__field--hideo" type="password" id="password" ng-model="vm.password" placeholder="PASSWORD">
-              <label class="input__label input__label--hideo" for="password">
-                <i class="fa fa-fw fa-lock icon icon--hideo"></i>
-                <span class="input__label-content input__label-content--hideo">Password</span>
-              </label>
-            </span>
+          <!-- begin: password input -->
+          <div ng-show="form.$submitted || form.password.$touched">
+            <div ng-show="form.password.$error.required">Please enter your password.</div>
+          </div>
+          <span class="input input--hideo">
+            <input class="input__field input__field--hideo" type="password" id="password" name="password" ng-model="vm.password" placeholder="PASSWORD" required>
+            <label class="input__label input__label--hideo" for="password">
+              <i class="fa fa-fw fa-lock icon icon--hideo"></i>
+              <span class="input__label-content input__label-content--hideo">Password</span>
+            </label>
+          </span>
+          <!-- end: password input -->
 
-            <button class="signin__button btn btn-primary btn-block">Login</button>
+          <button class="signin__button btn btn-primary btn-block">Login</button>
 
-          </form>
+        </form>
 
-          <p class="signin__register">To register as a new client, <a href="#" ng-click="vm.register()">click here</a>.</p>
+        <p class="signin__register">To register as a new client, <a href="#" ng-click="vm.register()">click here</a>.</p>
 
       </div>
       <!-- end: login -->
