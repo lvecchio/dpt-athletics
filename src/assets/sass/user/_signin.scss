@@ -1,0 +1,44 @@
+.signin {
+
+  width: 35%;
+  margin: 0 auto;
+  background-color: rgba(235, 235, 235, 0.8);
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 0;
+
+  .signin__logo {
+    margin-bottom: 30px;
+
+    img {
+      display: block;
+      width: 45%;
+      margin: 0 auto;
+    }
+  }
+
+  .signin__form {
+
+    .input {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto 25px;
+
+      .input__field {
+        text-transform: uppercase;
+      }
+    }
+
+    .signin__button {
+      width: 100%;
+      margin: 0 auto;
+      height: 43px;
+    }
+
+  }
+
+  .signin__register {
+    margin-top: 25px;
+  }
+
+}

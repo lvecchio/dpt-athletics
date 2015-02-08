@@ -1,0 +1,23 @@
+/* global styles */
+.dpt {
+  font-family: $font-primary;
+  color: $text-color;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .app-content {
+    background:url($site-background) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: transparent;
+  }
+}

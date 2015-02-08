@@ -8,13 +8,15 @@
 // import compass mixins
 @import "compass/css3";
 
-// import global
-@import "global";
+// import layout
+@import "layout/global";
+@import "layout/header";
+@import "layout/sidebar";
 
-// import directives
-@import "directives/sidebar";
-@import "directives/header";
+// import common
+@import "common/forms";
+@import "common/buttons";
 
-// import states
-@import "states/login";
+// import modules
+@import "user/signin";
 

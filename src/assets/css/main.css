@@ -1,20 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,400,500,700);
 @import url(http://fonts.googleapis.com/css?family=Dosis:400,600);
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\000031}}
-body {
+/* global styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_global\.scss}line{font-family:\000032}}
+.dpt {
   font-family: "Roboto";
   color: #33363C;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\000036}}
-a {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_global\.scss}line{font-family:\000036}}
+.dpt a {
   color: #FF3F40;
   text-decoration: none;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\0000310}}
-.app-content {
-  background: url(../../assets/img/bg.jpg) no-repeat center center fixed;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_global\.scss}line{font-family:\0000310}}
+.dpt a:hover {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_global\.scss}line{font-family:\0000315}}
+.dpt .app-content {
+  background: url("../img/bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,57 +25,239 @@ a {
   background-color: transparent;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\0000319}}
-.card {
-  background: white;
-  margin: 20px 30px;
-  opacity: 0.95;
-  border-radius: 0.5em;
-  padding-top: 10px;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\000031}}
+.navbar {
+  background-color: #FFFFFF;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\000035}}
+.navbar .navbar-brand {
+  color: #FF3F40;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/_global\.scss}line{font-family:\0000327}}
-.card--measurements {
-  overflow: scroll;
-  height: 500px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\000031}}
 .sidebar {
   background-color: #22262B;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\000034}}
 .sidebar .app-name {
   background-color: #FFFFFF;
   border-bottom: 1px solid #22262B;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\000038}}
 .sidebar .app-name .logo {
   width: 60%;
-  margin: 0px 0px 0px 45px;
+  margin: 0 0 0 45px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000315}}
 .sidebar .list-group-item {
   text-transform: uppercase;
   font-size: 1.1em;
   font-weight: 400;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_sidebar\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000321}}
 .sidebar .list-group-item.active {
   background-color: #FF3F40;
   border-color: #FF3F40;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_header\.scss}line{font-family:\000031}}
-.navbar {
-  background-color: #FFFFFF;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/directives\/_header\.scss}line{font-family:\000035}}
-.navbar .navbar-brand {
-  color: #FF3F40;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\000031}}
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em;
+  max-width: 400px;
+  width: calc(100% - 2em);
+  vertical-align: top;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/a545703\/Dev\/Personal\/dpt-athletics-laura\/src\/assets\/sass\/states\/_login\.scss}line{font-family:\000031}}
-.login {
-  width: 50%;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000311}}
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.5);
+  color: #aaa;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000325}}
+.input__field:focus {
+  outline: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000329}}
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000345}}
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000354}}
+.icon {
+  color: #ddd;
+  font-size: 150%;
+}
+
+/* Hideo */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000360}}
+.input--hideo {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000365}}
+.input__field--hideo {
+  padding: 0.85em 0.85em 0.85em 3em;
+  width: 100%;
+  background: transparent;
+  -webkit-transform: translate3d(1em, 0, 0);
+  transform: translate3d(1em, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000375}}
+.input__label--hideo {
+  position: absolute;
+  padding: 1.2em 1em;
+  width: 4em;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000381}}
+.input__label--hideo .fa-lock {
+  font-size: 175%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\0000386}}
+.input__label--hideo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 4em;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\00003101}}
+.icon--hideo {
+  color: #33363C;
+  -webkit-transform: scale3d(1, 1, 1);
+  /* Needed for Chrome bug */
+  transform: scale3d(1, 1, 1);
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\00003111}}
+.input__label-content--hideo {
+  position: absolute;
+  top: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\00003116}}
+.input__field--hideo:focus {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\00003121}}
+.input__field--hideo:focus + .input__label--hideo::before {
+  -webkit-transform: scale3d(0.8, 1, 1);
+  transform: scale3d(0.8, 1, 1);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\00003126}}
+.input__field--hideo:focus + .input__label--hideo .icon--hideo {
+  -webkit-transform: scale3d(0.6, 0.6, 1);
+  transform: scale3d(0.6, 0.6, 1);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_buttons\.scss}line{font-family:\000031}}
+.btn-primary {
+  background-color: #FFFFFF;
+  color: #22262B;
+  border-radius: 0;
+  border-color: #FFFFFF;
+  text-transform: uppercase;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_buttons\.scss}line{font-family:\000038}}
+.btn-primary:hover {
+  background-color: #FF3F40;
+  border-color: #FF3F40;
+  color: #FFFFFF;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\000031}}
+.signin {
+  width: 35%;
+  margin: 0 auto;
+  background-color: rgba(235, 235, 235, 0.8);
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000310}}
+.signin .signin__logo {
+  margin-bottom: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000313}}
+.signin .signin__logo img {
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000322}}
+.signin .signin__form .input {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto 25px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000327}}
+.signin .signin__form .input .input__field {
+  text-transform: uppercase;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000332}}
+.signin .signin__form .signin__button {
+  width: 100%;
+  margin: 0 auto;
+  height: 43px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_signin\.scss}line{font-family:\0000340}}
+.signin .signin__register {
+  margin-top: 25px;
 }

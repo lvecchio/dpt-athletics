@@ -1,0 +1,13 @@
+.btn-primary {
+  background-color: $color-white;
+  color: $color-dark;
+  border-radius: 0;
+  border-color: $color-white;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-orange;
+    border-color: $color-orange;
+    color: $color-white;
+  }
+}
