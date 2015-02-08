@@ -4,11 +4,11 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_global\.scss}line{font-family:\000032}}
 .dpt {
   font-family: "Roboto";
-  color: #33363C;
+  color: #8CA2AD;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_global\.scss}line{font-family:\000036}}
 .dpt a {
-  color: #FF3F40;
+  color: #2CC5C6;
   text-decoration: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_global\.scss}line{font-family:\0000310}}
@@ -24,40 +24,80 @@
   background-size: cover;
   background-color: transparent;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_global\.scss}line{font-family:\0000324}}
+.dpt.has-sidebar-right .app-content {
+  background-image: none;
+  background-color: #FAFAFA;
+  margin-top: 15px;
+  padding: 25px;
+}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\000031}}
-.navbar {
-  background-color: #FFFFFF;
+.header {
+  min-height: 65px;
+  background-color: #353942;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\000035}}
-.navbar .navbar-brand {
-  color: #FF3F40;
+.header .navbar-brand {
+  color: #FAFAFA;
+  font-size: 2em;
+  margin: 5px 0px 0px 35px;
+  padding-left: 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000312}}
+.header .header__notifications {
+  background-color: #FF3F40;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000315}}
+.header .header__notifications .btn {
+  width: 70px;
+  color: #FAFAFA;
+  min-height: 64px;
+  line-height: 62px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000321}}
+.header .header__notifications .btn i {
+  font-size: 20px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\000031}}
 .sidebar {
-  background-color: #22262B;
+  background-color: #353942;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\000034}}
-.sidebar .app-name {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #22262B;
+.sidebar .sidebar__logo {
+  background-color: #2CC5C6;
+  margin-bottom: 0px;
+  min-height: 65px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\000038}}
-.sidebar .app-name .logo {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\000039}}
+.sidebar .sidebar__logo img {
   width: 60%;
   margin: 0 0 0 45px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000316}}
 .sidebar .list-group-item {
   text-transform: uppercase;
   font-size: 1.1em;
   font-weight: 400;
+  background-color: #353942;
+  border-bottom: none;
+  color: #8CA2AD;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000325}}
+.sidebar .list-group-item:hover {
+  background-color: rgba(53, 57, 66, 0.8);
+  color: #FAFAFA;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000330}}
+.sidebar .list-group-item:focus {
+  background-color: rgba(53, 57, 66, 0.8);
+  color: #FAFAFA;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000335}}
 .sidebar .list-group-item.active {
-  background-color: #FF3F40;
-  border-color: #FF3F40;
+  background-color: rgba(53, 57, 66, 0.5);
+  color: #FAFAFA;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\000031}}
@@ -173,7 +213,7 @@
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_forms\.scss}line{font-family:\00003101}}
 .icon--hideo {
-  color: #33363C;
+  color: #353942;
   -webkit-transform: scale3d(1, 1, 1);
   /* Needed for Chrome bug */
   transform: scale3d(1, 1, 1);
@@ -210,7 +250,7 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/common\/_buttons\.scss}line{font-family:\000031}}
 .btn-primary {
   background-color: #FF3F40;
-  color: #FFFFFF;
+  color: #FAFAFA;
   border-radius: 0;
   border-color: #FF3F40;
   text-transform: uppercase;
@@ -219,7 +259,7 @@
 .btn-primary:hover {
   background-color: #FF3F40;
   border-color: #FF2100;
-  color: #FFFFFF;
+  color: #FAFAFA;
   background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #B1200B), color-stop(100%, #FF2100));
   background: -webkit-linear-gradient(top, #B1200B, #FF2100);
   background: linear-gradient(to bottom, #b1200b, #ff2100);
@@ -228,7 +268,7 @@
 .btn-primary:focus {
   background-color: #FF3F40;
   border-color: #FF3F40;
-  color: #FFFFFF;
+  color: #FAFAFA;
   outline: none;
   background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #B1200B), color-stop(100%, #FF2100));
   background: -webkit-linear-gradient(top, #B1200B, #FF2100);

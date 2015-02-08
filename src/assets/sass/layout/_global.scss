@@ -20,4 +20,11 @@
     background-size: cover;
     background-color: transparent;
   }
+
+  &.has-sidebar-right .app-content {
+    background-image: none;
+    background-color: $color-white;
+    margin-top: 15px;
+    padding: 35px;
+  }
 }

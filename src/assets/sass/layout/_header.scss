@@ -1,8 +1,26 @@
-.navbar {
-
-  background-color: $color-white;
+.header {
+  min-height: 65px;
+  background-color: $color-dark-grey;
 
   .navbar-brand {
-    color: $color-orange;
+    color: $color-white;
+    font-size: 2em;
+    margin: 5px 0px 0px 35px;
+    padding-left: 0px;
+  }
+
+  .header__notifications {
+    background-color: $color-orange;
+
+    .btn {
+      width: 70px;
+      color: $color-white;
+      min-height: 64px;
+      line-height: 62px;
+
+      i {
+        font-size: 20px;
+      }
+    }
   }
 }

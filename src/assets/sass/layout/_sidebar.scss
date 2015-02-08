@@ -1,11 +1,12 @@
 .sidebar {
-  background-color: $color-dark;
+  background-color: $color-dark-grey;
 
-  .app-name {
-    background-color: $color-white;
-    border-bottom: 1px solid $color-dark;
+  .sidebar__logo {
+    background-color: $color-teal;
+    margin-bottom: 0px;
+    min-height: 65px;
 
-    .logo {
+    img {
       width: 60%;
       margin: 0 0 0 45px;
     }
@@ -17,10 +18,23 @@
     text-transform: uppercase;
     font-size: 1.1em;
     font-weight: 400;
+    background-color: $color-dark-grey;
+    border-bottom: none;
+    color: $color-light-grey;
+
+    &:hover {
+      background-color: rgba(53, 57, 66, 0.8);
+      color: $color-white;
+    }
+
+    &:focus {
+      background-color: rgba(53, 57, 66, 0.8);
+      color: $color-white;
+    }
 
     &.active {
-      background-color: $color-orange;
-      border-color: $color-orange;
+      background-color: rgba(53, 57, 66, 0.5);
+      color: $color-white;
     }
 
   }
