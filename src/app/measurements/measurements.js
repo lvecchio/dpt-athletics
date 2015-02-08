@@ -6,17 +6,16 @@
     .controller('Measurements', Measurements);
 
   /* @ngInject */
-  function Measurements(measurementservice, $scope, $log) {
+  function Measurements(measurementservice, $scope, xmlParser, $log) {
     var vm = this;
-    vm.page = 'Measurements';
+    vm.page = 'Measurements Controller';
     vm.result = {};
 
-    // add back to argument list for measurements xmlParser,
     // in fileUploadDirective
-    //$scope.convertXML = function($fileContent){
-    //  $scope.result = xmlParser.xml_str2json($fileContent);
-    //  vm.result = $scope.result.newDataSet.Table;
-    //};
+    $scope.convertXML = function($fileContent){
+      $scope.result = xmlParser.xml_str2json($fileContent);
+      vm.result = $scope.result.newDataSet.Table;
+    };
 
   }
 
