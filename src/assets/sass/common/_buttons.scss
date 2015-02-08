@@ -1,13 +1,36 @@
 .btn-primary {
-  background-color: $color-white;
-  color: $color-dark;
+  background-color: $color-orange;
+  color: $color-white;
   border-radius: 0;
-  border-color: $color-white;
+  border-color: $color-orange;
   text-transform: uppercase;
 
   &:hover {
     background-color: $color-orange;
+    border-color: #FF2100;
+    color: $color-white;
+    background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#B1200B),color-stop(100%,#FF2100));
+    background: -webkit-linear-gradient(top,#B1200B,#FF2100);
+    background: linear-gradient(to bottom,#B1200B,#FF2100);
+  }
+
+  &:focus {
+    background-color: $color-orange;
     border-color: $color-orange;
     color: $color-white;
+    outline: none;
+    background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#B1200B),color-stop(100%,#FF2100));
+    background: -webkit-linear-gradient(top,#B1200B,#FF2100);
+    background: linear-gradient(to bottom,#B1200B,#FF2100);
+  }
+
+  &[disabled='disabled'] {
+    background-color: #eeeeee;
+    outline: none;
+    border-color: #eeeeee;
+    color: #666363;
+    background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#fff),color-stop(100%,#dcdcdc));
+    background: -webkit-linear-gradient(top,#fff,#dcdcdc);
+    background: linear-gradient(to bottom,#fff,#dcdcdc);
   }
 }

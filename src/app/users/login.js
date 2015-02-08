@@ -11,6 +11,7 @@
     var vm = this;
     vm.signIn = signIn;
     vm.register = register;
+    vm.emailPattern = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
 
     function signIn() {
 
