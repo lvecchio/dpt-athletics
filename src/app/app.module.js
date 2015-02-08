@@ -11,6 +11,8 @@
      *  Each feature area will have access to all methods in core.
      */
     'app.core',
+    /* Cross-module directives here */
+    'app.widgets',
 
     /*
      * Feature Areas

@@ -8,7 +8,7 @@
   /* @ngInject */
   function Measurements(measurementservice, $scope, xmlParser, $log) {
     var vm = this;
-    vm.page = 'Measurements Controller';
+    vm.page = 'Measurements';
     vm.result = {};
 
     // in fileUploadDirective

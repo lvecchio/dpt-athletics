@@ -1,7 +1,8 @@
 (function() {
   'use strict';
-  angular.module('app.core')
-    .directive('onReadFile', onReadFile);
+  angular
+    .module('app.widgets')
+    .directive('dptOnReadFile', onReadFile);
 
   /**
    * Created by a545703 on 1/17/15.
@@ -14,6 +15,8 @@
    * http://jsfiddle.net/alexsuch/6aG4x/
    * @author Dan Lourenco
    */
+
+
   function onReadFile($parse) {
 
     return {
