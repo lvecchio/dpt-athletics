@@ -15,10 +15,11 @@
     /*
      * Feature Areas
      */
+    'app.layout',
     'app.users',
     'app.dashboard',
-    'app.measurements',
-    'app.layout'
+    'app.measurements'
+
     //'app.exercises',
     //'app.measurements',
     //'app.scheduling',

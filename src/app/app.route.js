@@ -41,20 +41,16 @@
         controller: 'Measurements as vm',
         templateUrl: 'app/measurements/measurements.html'
       })
+      .state('base.profile', {
+        url: '/profile',
+        controller: 'Profile as vm',
+        templateUrl: 'app/users/profile.html'
+      })
       //.state('goals', {
       //  url: '/goals',
       //  templateUrl: 'app/states/goals/goalsView.html'
       //})
-      //.state('profile', {
-      //  url: '/profile',
-      //  controller: 'ProfileController as profile',
-      //  templateUrl: 'app/states/profile/profileView.html'
-      //})
-      //.state('dashboard', {
-      //  url: '/dashboard',
-      //  controller: 'Dashboard as vm',
-      //  templateUrl: 'app/dashboard/dashboard.html'
-      //})
+
   }
 
 

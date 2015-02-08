@@ -1,0 +1,37 @@
+<!-- begin: profile -->
+<div class="profile">
+  <h1>User Profile</h1>
+  <div class="section">
+
+    <form role="form" ng-submit='profile.saveData()'>
+      <fieldset>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" ng-model="profile.email" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" ng-model="profile.firstName" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" ng-model="profile.lastName" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label>Age</label>
+          <input type="text" ng-model="profile.age" class="form-control">
+        </div>
+
+      </fieldset>
+      <hr>
+
+      <button class="btn btn-primary btn-block">Save</button>
+
+    </form>
+
+  </div>
+</div>
+<!-- end: profile -->
