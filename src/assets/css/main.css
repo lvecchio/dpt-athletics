@@ -111,10 +111,13 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000342}}
 .sidebar .list-group-header {
   color: #000000;
-  font-size: 20px;
+  font-size: 13px;
   margin: 0 0 5px 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000352}}
 .sidebar .list-group-item {
   text-transform: uppercase;
   font-size: 17px;
@@ -124,34 +127,34 @@
   color: #656b79;
   padding: 20px 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000362}}
 .sidebar .list-group-item i {
   font-size: 20px;
   margin-right: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000367}}
 .sidebar .list-group-item .icon-number {
   float: right;
   background-color: #FF3F40;
   color: #FAFAFA;
   font-size: 13px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000374}}
 .sidebar .list-group-item:hover {
   background-color: #474C57;
   color: #FAFAFA;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000379}}
 .sidebar .list-group-item:focus {
   background-color: #474C57;
   color: #FAFAFA;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000384}}
 .sidebar .list-group-item.active {
   background-color: #474C57;
   color: #FAFAFA;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000391}}
 .sidebar .sidebar__footer {
   position: absolute;
   bottom: 0px;
@@ -160,7 +163,7 @@
   z-index: 1000;
   min-height: 65px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000399}}
 .sidebar .sidebar__footer .sidebar__footerRight,
 .sidebar .sidebar__footer .sidebar__divider,
 .sidebar .sidebar__footer .sidebar__footerLeft {
@@ -168,13 +171,13 @@
   font-size: 25px;
   line-height: 65px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\00003106}}
 .sidebar .sidebar__footer .sidebar__footerRight,
 .sidebar .sidebar__footer .sidebar__footerLeft {
   width: 49%;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\00003112}}
 .sidebar .sidebar__footer .sidebar__divider {
   color: #000000;
 }

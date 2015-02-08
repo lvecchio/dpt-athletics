@@ -15,7 +15,8 @@
      */
     'ui.router',
     'mobile-angular-ui',
-    'firebase'
+    'firebase',
+    'ui.grid'
 
   ])
 })();

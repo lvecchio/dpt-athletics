@@ -50,6 +50,11 @@
         url: '/goals',
         templateUrl: 'app/goals/goals.html'
       })
+      .state('base.clients', {
+        url: '/clients',
+        controller: 'Clients as vm',
+        templateUrl: 'app/users/clients.html'
+      })
 
   }
 
