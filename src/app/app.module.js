@@ -16,7 +16,8 @@
      * Feature Areas
      */
     'app.users',
-    'app.dashboard'
+    'app.dashboard',
+    'app.measurements'
     //'app.exercises',
     //'app.measurements',
     //'app.scheduling',

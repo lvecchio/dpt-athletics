@@ -3,7 +3,7 @@
 
   angular
     .module('app.measurements')
-    .factory('measurementservice, measurementservice');
+    .factory('measurementservice', measurementservice);
 
   /* @ngInject */
   function measurementservice($firebase, $firebaseAuth, FIREBASE_URL, $q) {
