@@ -13,6 +13,7 @@
     vm.register = register;
 
     function signIn() {
+
       // create user object with login information
       var user = {
         email: vm.email,

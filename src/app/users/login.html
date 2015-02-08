@@ -15,7 +15,7 @@
 
         <div class="signin__logo"><img src="../assets/img/logo.png" /></div>
 
-        <form novalidate name="form" ng-submit="vm.$valid && vm.signIn()" class="signin__form">
+        <form novalidate name="form" ng-submit="vm.signIn()" class="signin__form">
 
           <!-- begin: email input -->
           <div ng-show="form.$submitted || form.email.$touched">
@@ -43,7 +43,7 @@
           </span>
           <!-- end: password input -->
 
-          <button class="signin__button btn btn-primary btn-block">Login</button>
+          <button ng-disabled="form.$invalid" class="signin__button btn btn-primary btn-block">Login</button>
 
         </form>
 

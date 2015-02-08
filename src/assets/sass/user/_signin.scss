@@ -22,16 +22,17 @@
       max-width: 100%;
       width: 100%;
       margin: 0 auto 25px;
-
-      .input__field {
-        text-transform: uppercase;
-      }
     }
 
     .signin__button {
       width: 100%;
       margin: 0 auto;
       height: 43px;
+
+      &[disabled='disabled'] {
+        background-color: #666363;
+        border-color: #666363;
+      }
     }
 
   }
