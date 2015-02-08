@@ -19,7 +19,8 @@ function RegisterController(FirebaseService, $state) {
       password: register.password
     };
 
-    FirebaseService.createUser(user).then(function() {
+    FirebaseService.createUser(user)
+      .then(function() {
       return FirebaseService.login(user); // log in the new user
     }).then(function(authData) {
       console.log("Logged in as: " + authData.uid);

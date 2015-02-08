@@ -49,18 +49,18 @@
   <!-- end: app js -->
 
   <!-- begin: services -->
-  <script src="app/services/firebase.js"></script>
+  <script src="app/_to_delete/services/firebase.js"></script>
   <script src="https://x2js.googlecode.com/hg/xml2json.js"></script>
-  <script src="app/common/xmlParser.js"></script>
-  <script src="app/services/measurements.js"></script>
+  <script src="app/_to_delete/common/xmlParser.js"></script>
+  <script src="app/_to_delete/services/measurements.js"></script>
   <!-- end: services -->
 
   <!-- begin: state controllers -->
-  <script src="app/states/login/loginController.js"></script>
-  <script src="app/states/register/registerController.js"></script>
-  <script src="app/states/dashboard/dashboardController.js"></script>
-  <script src="app/states/measurements/measurementsController.js"></script>
-  <script src="app/states/profile/profileController.js"></script>
+  <script src="app/_to_delete/states/login/loginController.js"></script>
+  <script src="app/_to_delete/states/register/registerController.js"></script>
+  <script src="app/_to_delete/states/dashboard/dashboardController.js"></script>
+  <script src="app/_to_delete/states/measurements/measurementsController.js"></script>
+  <script src="app/_to_delete/states/profile/profileController.js"></script>
   <!-- end: section controllers -->
 
   <!-- end: state controllers -->
@@ -72,6 +72,31 @@
   <script src="app/directives/file-upload/fileUploadDirective.js"></script>
   <!-- end: directives -->
 
+
+ <!-- begin: core module -->
+  <script src="app/core/core.module.js"></script>
+  <script src="app/core/constants.js"></script>
+  <script src="app/core/dataservice.js"></script>
+ <!-- end: core module -->
+
+  <!-- begin: layout module -->
+  <script src="app.layout/layout.module.js"></script>
+  <!-- end: layout module -->
+
+
+  <!-- begin: users module -->
+  <script src="app/users/user.module.js"></script>
+  <script src="app/users/login.js"></script>
+  <script src="app/users/login.html"></script>
+  <script src="app/users/register.js"></script>
+  <script src="app/users/register.html"></script>
+  <!-- end: users module -->
+
+  <!-- begin: dashboard module -->
+  <script src="app/dashboard/dashboard.module.js"></script>
+  <script src="app/dashboard/dashboard.js"></script>
+  <script src="app/dashboard/dashboard.html"></script>
+  <!-- end: dashboard module -->
 
 
 </body>
