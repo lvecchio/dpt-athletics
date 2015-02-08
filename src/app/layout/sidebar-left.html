@@ -1,11 +1,19 @@
 <div class="scrollable">
+  <!-- TODO: Add DPT logo that matches new design -->
   <h1 class="scrollable-header sidebar__logo"></h1>
   <div class="scrollable-content">
+    <div class="sidebar__update">
+      <!-- TODO: Hide/show "sidebar_update" and update number icon if new changes added to Firebase -->
+      <span class="icon-number">1</span>
+      <span class="sidebar__updateText">Update available</span>
+      <i class="fa fa-refresh fa-pulse"></i>
+    </div>
     <div class="list-group" ui-turn-off='uiSidebarLeft'>
-      <a class="list-group-item" ui-sref="base.dashboard" ui-sref-active="active">Dashboard <i class="fa fa-dashboard pull-right"></i></a>
-      <a class="list-group-item" ui-sref="base.measurements" ui-sref-active="active">Measurements <i class="fa fa-bar-chart-o pull-right"></i></a>
-      <a class="list-group-item" ui-sref="base.goals" ui-sref-active="active">Goals <i class="fa fa-tasks pull-right"></i></a>
-      <a class="list-group-item" ui-sref="base.profile" ui-sref-active="active">Profile <i class="fa pull-right"></i></a>
+      <div class="list-group-header">Main</div>
+      <a class="list-group-item" ui-sref="base.dashboard" ui-sref-active="active">Dashboard <i class="fa fa-dashboard pull-left"></i></a>
+      <a class="list-group-item" ui-sref="base.measurements" ui-sref-active="active">Measurements <i class="fa fa-bar-chart-o pull-left"></i></a>
+      <a class="list-group-item" ui-sref="base.goals" ui-sref-active="active">Goals <i class="fa fa-tasks pull-left"></i></a>
+      <a class="list-group-item" ui-sref="base.profile" ui-sref-active="active">Profile <i class="fa fa-user pull-left"></i></a>
     </div>
   </div>
 </div>

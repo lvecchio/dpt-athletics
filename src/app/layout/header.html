@@ -1,12 +1,14 @@
 <div class="navbar navbar-app navbar-absolute-top header">
-
+  <!-- TODO: Change title based on state -->
   <div class="navbar-brand navbar-brand-center" ui-yield-to="title">Dashboard</div>
-  <div class="btn-group pull-left">
+
+  <div class="btn-group pull-left header__notifications">
     <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
       <i class="fa fa-bars"></i>
     </div>
   </div>
 
+  <!-- TODO: Use right sidebar for notification newsfeed -->
   <div class="btn-group pull-right header__notifications" ui-yield-to="navbarAction">
     <div ui-toggle="uiSidebarRight" class="btn">
       <i class="fa fa-eye"></i>

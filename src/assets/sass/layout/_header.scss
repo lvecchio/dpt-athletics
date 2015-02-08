@@ -1,11 +1,11 @@
 .header {
-  min-height: 65px;
+  min-height: 66px;
   background-color: $color-dark-grey;
 
   .navbar-brand {
     color: $color-white;
-    font-size: 2em;
-    margin: 5px 0px 0px 35px;
+    font-size: 1.5em;
+    text-transform: uppercase;
     padding-left: 0px;
   }
 
@@ -21,6 +21,15 @@
       i {
         font-size: 20px;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+
+  .header {
+    .navbar-brand {
+      margin: 5px 0px 0px 35px;
     }
   }
 }
