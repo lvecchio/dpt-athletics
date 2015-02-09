@@ -15,13 +15,15 @@
 
     /* DATASERVICE API */
     var service = {
-      login:          login,
-      logout:         logout,
-      resolveUser:    resolveUser,
-      createUser:     createUser,
-      removeUser:     removeUser,
-      findUserByName: findUserByName,
-      createProfile:  createProfile
+      login:              login,
+      logout:             logout,
+      resolveUser:        resolveUser,
+      createUser:         createUser,
+      removeUser:         removeUser,
+      findUserByName:     findUserByName,
+      createProfile:      createProfile,
+      sendPasswordReset:  sendPasswordResetEmail,
+      resetPassword:      resetPassword
     };
 
     return service;
@@ -83,6 +85,18 @@
       var user = $firebase(ref.child('users').child(authData.uid));
 
       return user.$set(profile);
+    }
+
+    function sendPasswordResetEmail(user) {
+      return authObject.$resetPassword(user.email);
+    }
+
+    function resetPassword(user) {
+      return authObject.$changePassword({
+        email: user.email,
+        oldPassword: user.oldPassword,
+        newPassword: user.newPassword
+      });
     }
 
   }
