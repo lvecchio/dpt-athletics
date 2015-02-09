@@ -25,6 +25,16 @@
         controller: 'Register as vm',
         templateUrl: 'app/users/register.html'
       })
+      .state('forgot', {
+        url: '/forgot',
+        controller: 'ForgotPassword as vm',
+        templateUrl: 'app/users/forgot.html'
+      })
+      .state('reset', {
+        url: '/reset',
+        controller: 'ResetPassword as vm',
+        templateUrl: 'app/users/reset.html'
+      })
       .state('base', {
         abstract: true,
         url: '/base',

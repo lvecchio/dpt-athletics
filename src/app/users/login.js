@@ -13,8 +13,9 @@
     vm.register = register;
     vm.emailPattern = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
 
-    function signIn() {
 
+
+    function signIn() {
       // create user object with login information
       var user = {
         email: vm.email,
@@ -34,6 +35,8 @@
     function register() {
       $state.go('register');
     }
+
+
   }
 
 })();
