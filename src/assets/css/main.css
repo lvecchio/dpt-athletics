@@ -29,7 +29,6 @@
   background-image: none;
   background-color: #FAFAFA;
   margin-top: 15px;
-  padding: 35px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\000031}}
@@ -120,12 +119,12 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000352}}
 .sidebar .list-group-item {
   text-transform: uppercase;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 300;
   background-color: #353942;
   border-bottom: none;
   color: #656b79;
-  padding: 20px 15px;
+  padding: 15px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_sidebar\.scss}line{font-family:\0000362}}
 .sidebar .list-group-item i {
@@ -427,4 +426,9 @@
   .signin {
     width: 45%;
   }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\000032}}
+.profile .profile__header {
+  background: #FFFFFF;
+  width: 100%;
 }

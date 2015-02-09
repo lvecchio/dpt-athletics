@@ -1,6 +1,17 @@
-<!-- begin: profile -->
 <div class="profile">
-  <h1>User Profile</h1>
+
+  <div class="profile__header">
+    <div class="profile__img"></div>
+    <div class="profile__stats">
+      <div class="profile_level"><span>{{ vm.user.fitnessLevel }}</span> Level</div>
+      <div class="profile_bodyFat"><span>{{ vm.user.bodyFat }}</span>% Body Fat</div>
+      <div class="profile_classes"><span>{{ vm.user.classesAttended }}</span> Workouts</div>
+    </div>
+  </div>
+
+
+
+
   <div class="section">
 
     <form role="form" ng-submit='profile.saveData()'>
@@ -34,4 +45,3 @@
 
   </div>
 </div>
-<!-- end: profile -->
