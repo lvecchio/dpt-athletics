@@ -3,7 +3,7 @@
   <div class="profile__header">
     <div class="profile__img"><img src="../assets/img/profile/lauravecchio.jpg"/></div>
     <div class="profile__stats">
-      <div class="profile__name">{{ vm.user.name }}</div>
+      <div class="profile__name">{{ vm.user.firstName }} {{ vm.user.lastName }}</div>
       <div class="profile__level"><span>{{ vm.user.fitnessLevel }}</span> Level</div>
       <div class="profile__bodyFat"><span>{{ vm.user.bodyFat }}</span>% Body Fat</div>
       <div class="profile__classes"><span>{{ vm.user.classesAttended }}</span> Workouts</div>
@@ -11,34 +11,29 @@
   </div>
 
 
+    <form name="form" ng-submit='vm.saveData()' class="profile__form">
 
+      <span class="input input--isao">
+        <input class="input__field input__field--isao" type="text" id="input-firstName" placeholder="{{ vm.user.firstName }}" />
+        <label class="input__label input__label--isao" for="input-firstName">
+          <span class="input__label-content input__label-content--isao">First Name</span>
+        </label>
+			</span>
 
-  <div class="section">
+      <span class="input input--isao">
+        <input class="input__field input__field--isao" type="text" id="input-lastName" placeholder="{{ vm.user.lastName }}"/>
+        <label class="input__label input__label--isao" for="input-lastName">
+          <span class="input__label-content input__label-content--isao">First Name</span>
+        </label>
+			</span>
 
-    <form role="form" ng-submit='profile.saveData()'>
-      <fieldset>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" ng-model="profile.email" class="form-control">
-        </div>
+      <span class="input input--isao">
+        <input class="input__field input__field--isao" type="date" id="input-birthday" placeholder="{{ vm.user.birthday }}"/>
+        <label class="input__label input__label--isao" for="input-lastName">
+          <span class="input__label-content input__label-content--isao">Birthday</span>
+        </label>
+			</span>
 
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" ng-model="profile.firstName" class="form-control">
-        </div>
-
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" ng-model="profile.lastName" class="form-control">
-        </div>
-
-        <div class="form-group">
-          <label>Age</label>
-          <input type="text" ng-model="profile.age" class="form-control">
-        </div>
-
-      </fieldset>
-      <hr>
 
       <button class="btn btn-primary btn-block">Save</button>
 

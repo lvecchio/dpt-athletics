@@ -1,5 +1,8 @@
 .profile {
   .profile__header {
+
+    @include clearfix;
+
     background:url($profile-background) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -51,5 +54,16 @@
 
     }
 
+  }
+
+  .profile__form {
+    .input {
+      display: block;
+    }
+
+    .btn {
+      width: 40%;
+      margin: 20px 0 0 20px;
+    }
   }
 }

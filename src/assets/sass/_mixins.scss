@@ -5,3 +5,11 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
