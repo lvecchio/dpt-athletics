@@ -34,3 +34,34 @@
     background: linear-gradient(to bottom,#fff,#dcdcdc);
   }
 }
+
+.btn-teal {
+  background-color: $color-light-grey;
+  color: $color-white;
+  border-radius: 0;
+  border-color: $color-light-grey-teal;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-teal;
+    border-color: $color-teal;
+    color: $color-white;
+  }
+
+  &:focus {
+    background-color: $color-teal;
+    border-color: $color-teal;
+    color: $color-white;
+    outline: none;
+  }
+
+  &[disabled='disabled'] {
+    background-color: #eeeeee;
+    outline: none;
+    border-color: #eeeeee;
+    color: #666363;
+    background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#fff),color-stop(100%,#dcdcdc));
+    background: -webkit-linear-gradient(top,#fff,#dcdcdc);
+    background: linear-gradient(to bottom,#fff,#dcdcdc);
+  }
+}

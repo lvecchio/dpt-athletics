@@ -12,6 +12,7 @@
 
     // current user
     vm.user = {
+      userType: 'Client',
       firstName: 'Laura',
       lastName: 'Vecchio',
       bodyFat: '25',

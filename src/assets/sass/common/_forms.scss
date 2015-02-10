@@ -17,7 +17,7 @@
   border: none;
   border-radius: 0;
   background: rgba(255,255,255,0.5);
-  color: #aaa;
+  color: $color-dark-grey;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   -webkit-appearance: none; /* for box shadows to show on iOS */
 }
@@ -339,7 +339,7 @@
   padding: 0.75em 0.1em 0.25em;
   width: 100%;
   background: transparent;
-  color: #afb3b8;
+  color: $color-light-grey;
 }
 
 .input__label--isao {
@@ -347,7 +347,7 @@
   overflow: hidden;
   padding: 0;
   width: 100%;
-  color: #dadada;
+  color: #acacac;
   text-align: left;
 }
 
@@ -374,7 +374,7 @@
   top: 0;
   left: 0;
   padding: 0.75em 0.15em;
-  color: #da7071;
+  color: $color-orange;
   opacity: 0;
   -webkit-transform: translate3d(0, 50%, 0);
   transform: translate3d(0, 50%, 0);
@@ -386,7 +386,7 @@
 }
 
 .input__field--isao:focus + .input__label--isao::before {
-  background-color: #da7071;
+  background-color: $color-orange;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }

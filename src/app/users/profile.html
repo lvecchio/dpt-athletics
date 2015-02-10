@@ -3,6 +3,7 @@
   <div class="profile__header">
     <div class="profile__img"><img src="../assets/img/profile/lauravecchio.jpg"/></div>
     <div class="profile__stats">
+      <div class="profile__userType">{{ vm.user.userType }}</div>
       <div class="profile__name">{{ vm.user.firstName }} {{ vm.user.lastName }}</div>
       <div class="profile__level"><span>{{ vm.user.fitnessLevel }}</span> Level</div>
       <div class="profile__bodyFat"><span>{{ vm.user.bodyFat }}</span>% Body Fat</div>
@@ -10,8 +11,9 @@
     </div>
   </div>
 
+  <h2>Edit Profile</h2>
 
-    <form name="form" ng-submit='vm.saveData()' class="profile__form">
+  <form name="form" ng-submit='vm.saveData()' class="profile__form">
 
       <span class="input input--isao">
         <input class="input__field input__field--isao" type="text" id="input-firstName" placeholder="{{ vm.user.firstName }}" />
@@ -35,9 +37,8 @@
 			</span>
 
 
-      <button class="btn btn-primary btn-block">Save</button>
+      <button class="btn btn-teal btn-block">Save</button>
 
     </form>
 
-  </div>
 </div>
