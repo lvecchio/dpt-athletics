@@ -35,32 +35,33 @@
 .header {
   min-height: 66px;
   background-color: #353942;
+  border-bottom: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\000036}}
 .header .navbar-brand {
   color: #FAFAFA;
   font-size: 1.5em;
   text-transform: uppercase;
   padding-left: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000313}}
 .header .header__notifications {
   background-color: #FF3F40;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000316}}
 .header .header__notifications .btn {
   width: 70px;
   color: #FAFAFA;
   min-height: 64px;
   line-height: 62px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000322}}
 .header .header__notifications .btn i {
   font-size: 20px;
 }
 
 @media screen and (min-width: 850px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/layout\/_header\.scss}line{font-family:\0000332}}
   .header .navbar-brand {
     margin: 5px 0px 0px 35px;
   }
@@ -429,6 +430,63 @@
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\000032}}
 .profile .profile__header {
-  background: #FFFFFF;
+  background: url("../img/profile.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: transparent;
+  height: 250px;
   width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\0000313}}
+.profile .profile__img,
+.profile .profile__stats {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\0000318}}
+.profile .profile__img {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\0000322}}
+.profile .profile__img img {
+  width: 150px;
+  border-radius: 50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\0000328}}
+.profile .profile__stats {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: 50px;
+  color: #FAFAFA;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\0000333}}
+.profile .profile__stats .profile__name {
+  font-size: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\0000337}}
+.profile .profile__stats .profile__level,
+.profile .profile__stats .profile__bodyFat,
+.profile .profile__stats .profile__classes {
+  float: left;
+  margin-right: 10px;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lauravecchio\/Desktop\/dpt-athletics\/src\/assets\/sass\/user\/_profile\.scss}line{font-family:\0000345}}
+.profile .profile__stats .profile__level span,
+.profile .profile__stats .profile__bodyFat span,
+.profile .profile__stats .profile__classes span {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: lowercase;
 }

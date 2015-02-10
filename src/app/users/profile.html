@@ -1,11 +1,12 @@
 <div class="profile">
 
   <div class="profile__header">
-    <div class="profile__img"></div>
+    <div class="profile__img"><img src="../assets/img/profile/lauravecchio.jpg"/></div>
     <div class="profile__stats">
-      <div class="profile_level"><span>{{ vm.user.fitnessLevel }}</span> Level</div>
-      <div class="profile_bodyFat"><span>{{ vm.user.bodyFat }}</span>% Body Fat</div>
-      <div class="profile_classes"><span>{{ vm.user.classesAttended }}</span> Workouts</div>
+      <div class="profile__name">{{ vm.user.name }}</div>
+      <div class="profile__level"><span>{{ vm.user.fitnessLevel }}</span> Level</div>
+      <div class="profile__bodyFat"><span>{{ vm.user.bodyFat }}</span>% Body Fat</div>
+      <div class="profile__classes"><span>{{ vm.user.classesAttended }}</span> Workouts</div>
     </div>
   </div>
 

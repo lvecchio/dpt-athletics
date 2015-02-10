@@ -1,6 +1,55 @@
 .profile {
   .profile__header {
-    background: #FFFFFF;
+    background:url($profile-background) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: transparent;
+    height: 250px;
     width: 100%;
+  }
+
+  .profile__img,
+  .profile__stats{
+    float: left;
+  }
+
+  .profile__img {
+    @include vertical-align;
+    margin-left: 30px;
+
+    img {
+      width: 150px;
+      border-radius: 50%;
+    }
+  }
+
+  .profile__stats {
+    @include vertical-align;
+    margin-left: 50px;
+    color: $color-white;
+
+    .profile__name {
+      font-size: 40px;
+    }
+
+    .profile__level,
+    .profile__bodyFat,
+    .profile__classes {
+      float: left;
+      margin-right: 10px;
+      text-transform: uppercase;
+      line-height: 30px;
+
+      span {
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: lowercase;
+      }
+
+    }
+
   }
 }
