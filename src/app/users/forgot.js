@@ -18,6 +18,7 @@
       };
 
       $log.debug('ForgotPassword Controller: sendPasswordResetEmail called');
+
       dataservice.sendPasswordReset(user)
         .then(function() {
           $log.debug('Password reset email sent successfully');

@@ -21,6 +21,7 @@
       };
 
       $log.debug('ResetPassword Controller: reset called');
+
       dataservice.resetPassword(user)
         .then(function() {
           $log.debug('Password changed successfully');
