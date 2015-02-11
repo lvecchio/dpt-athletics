@@ -13,19 +13,19 @@
 
   <h2>Edit Profile</h2>
 
-  <form name="form" ng-submit='vm.saveData()' class="profile__form">
+  <form name="form" ng-submit='vm.saveProfile()' class="profile__form">
 
       <span class="input input--isao">
-        <input class="input__field input__field--isao" type="text" id="input-firstName" placeholder="{{ vm.user.firstName }}" />
+        <input class="input__field input__field--isao" type="text" id="input-firstName" placeholder="Laura" ng-model="vm.user.firstName" />
         <label class="input__label input__label--isao" for="input-firstName">
           <span class="input__label-content input__label-content--isao">First Name</span>
         </label>
 			</span>
 
       <span class="input input--isao">
-        <input class="input__field input__field--isao" type="text" id="input-lastName" placeholder="{{ vm.user.lastName }}"/>
+        <input class="input__field input__field--isao" type="text" id="input-lastName" placeholder="Vecchio" ng-model="vm.user.lastName"/>
         <label class="input__label input__label--isao" for="input-lastName">
-          <span class="input__label-content input__label-content--isao">First Name</span>
+          <span class="input__label-content input__label-content--isao">Last Name</span>
         </label>
 			</span>
 
@@ -37,7 +37,7 @@
 			</span>
 
 
-      <button class="btn btn-teal btn-block">Save</button>
+      <button class="btn btn-teal btn-block" type="submit">Save</button>
 
     </form>
 

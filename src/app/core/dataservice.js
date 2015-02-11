@@ -75,16 +75,21 @@
 
     function createProfile(user, authData) {
       var profile = {
-        email        : user.email,
-        firstName    : '',
-        lastName     : '',
-        age          : '',
-        accountStatus: '',
-        fitnessLevel : ''
+        email           : user.email,
+        firstName       : '', // string
+        lastName        : '', // string
+        age             : '', // integer
+        accountStatus   : '', // [active, inactive]
+        fitnessLevel    : '', // [blue, gold, whatevs]
+        classesAttended : '' // number
       };
       var user = $firebase(ref.child('users').child(authData.uid));
 
       return user.$set(profile);
+    }
+
+    function updateProfile(user) {
+      // stub
     }
 
     function sendPasswordResetEmail(user) {
