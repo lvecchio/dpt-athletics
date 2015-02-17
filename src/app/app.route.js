@@ -52,7 +52,7 @@
         templateUrl: 'app/measurements/measurements.html'
       })
       .state('base.profile', {
-        url: '/profile',
+        url: '/profile/:userId',
         controller: 'Profile as vm',
         templateUrl: 'app/users/profile.html'
       })

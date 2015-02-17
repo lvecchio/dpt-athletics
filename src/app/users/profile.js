@@ -5,25 +5,18 @@
     .controller('Profile', Profile);
 
   /* @ngInject */
-  function Profile($log) {
+  function Profile($log, dataservice) {
     /*jshint validthis: true */
     var vm = this;
     vm.title = 'Profile';
-
-    // current user
-    //vm.user = {
-    //  userType: 'Client',
-    //  firstName: 'Laura',
-    //  lastName: 'Vecchio',
-    //  bodyFat: '25',
-    //  fitnessLevel: 'Blue',
-    //  classesAttended: '78'
-    //};
-
     vm.saveProfile = saveProfile;
 
     function saveProfile() {
-      $log.debug('call to firebase here');
+
+      vm.user.email = dataservice.user.password.email;
+      vm.user.fitnessLevel = 'testing';
+
+      dataservice.updateProfile(vm.user);
     }
 
     //TODO: Create method to save profile data back to Firebase

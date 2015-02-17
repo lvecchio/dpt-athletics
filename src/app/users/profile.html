@@ -4,10 +4,11 @@
     <div class="profile__img"><img src="../assets/img/profile/lauravecchio.jpg"/></div>
     <div class="profile__stats">
       <div class="profile__userType">{{ vm.user.userType }}</div>
-      <div class="profile__name">{{ vm.user.firstName }} {{ vm.user.lastName }}</div>
+      <div class="profile__name">{{ vm.user.firstName }} {{ vm.user.lastName }} {{ vm.user.birthday }}</div>
       <div class="profile__level"><span>{{ vm.user.fitnessLevel }}</span> Level</div>
       <div class="profile__bodyFat"><span>{{ vm.user.bodyFat }}</span>% Body Fat</div>
       <div class="profile__classes"><span>{{ vm.user.classesAttended }}</span> Workouts</div>
+      <div class="profile__email"><span>{{ vm.user.email }}</span> Email</div>
     </div>
   </div>
 

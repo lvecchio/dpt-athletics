@@ -22,7 +22,7 @@
         })
         .then(function (authData) {
           $log.debug("Logged in as: " + authData.uid);
-
+          $state.go('base.profile', {userId: authData.uid});
           // create a profile w/ our user
           return dataservice.createProfile(user, authData);
         });

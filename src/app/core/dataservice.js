@@ -6,12 +6,12 @@
     .factory('dataservice', dataservice);
 
   /* @ngInject */
-  function dataservice($firebase, $firebaseAuth, FIREBASE_URL, $q) {
+  function dataservice($firebase, $firebaseAuth, FIREBASE_URL, $q, $log, $stateParams) {
 
     // create firebase references
     var ref = new Firebase(FIREBASE_URL);
     var authObject = $firebaseAuth(ref);
-    var data = $firebase(new Firebase(FIREBASE_URL)).$asObject();
+    //var data = $firebase(new Firebase(FIREBASE_URL)).$asObject();
 
     /* DATASERVICE API */
     var service = {
@@ -23,10 +23,10 @@
       findUserByName:     findUserByName,
       createProfile:      createProfile,
       sendPasswordReset:  sendPasswordResetEmail,
-      resetPassword:      resetPassword
+      resetPassword:      resetPassword,
+      updateProfile:      updateProfile,
+      user:               {}
     };
-
-    return service;
 
     function login(user) {
       return authObject.$authWithPassword({
@@ -52,9 +52,8 @@
     }
 
     function findUserByName(user) {
-      // TODO: change all console.log's to logger.
-      console.log('Athlete passed into service: ');
-      console.dir(user);
+      $log.debug('Athlete passed into service: ');
+      $log.debug(user);
 
       var defer = $q.defer();
       ref.child('users').once('value', function (userPathSnapshot) {
@@ -76,12 +75,7 @@
     function createProfile(user, authData) {
       var profile = {
         email           : user.email,
-        firstName       : '', // string
-        lastName        : '', // string
-        age             : '', // integer
-        accountStatus   : '', // [active, inactive]
-        fitnessLevel    : '', // [blue, gold, whatevs]
-        classesAttended : '' // number
+
       };
       var user = $firebase(ref.child('users').child(authData.uid));
 
@@ -89,7 +83,18 @@
     }
 
     function updateProfile(user) {
-      // stub
+      // grab the current user from the URL
+      var userProfile = $firebase(ref.child('users').child($stateParams.userId)).$asObject();
+      userProfile.fitnessLevel = user.fitnessLevel || null;
+      userProfile.email = user.email;
+      userProfile.firstName = user.firstName;
+      userProfile.lastName = user.lastName;
+      //userProfile.$save().then(function(ref) {
+      userProfile.$save().then(function(ref) {
+      }, function(error) {
+        console.log('error' + error);
+      });
+
     }
 
     function sendPasswordResetEmail(user) {
@@ -98,11 +103,34 @@
 
     function resetPassword(user) {
       return authObject.$changePassword({
-        email: user.email,
+        email: dataservice.user.password.email,
         oldPassword: user.oldPassword,
         newPassword: user.newPassword
       });
     }
 
+    authObject.$onAuth(function(authData) {
+      $log.debug('services/auth: $onAuth');
+
+      // user is logged in -- let's copy info to the user object
+      if (authData) {
+        angular.copy(authData, service.user);
+        // $asObject downloads the data into the local object
+        service.user.profile = $firebase(ref.child('profile').child(service.user.uid)).$asObject();
+        $log.debug(service.user);
+      } else {
+
+        // user is logged out -- destroy dession.
+        if(service.user && service.user.profile) {
+          service.user.profile.$destroy();
+        }
+        // delete current user's data
+        angular.copy({}, service.user);
+      }
+
+    });
+
+
+    return service;
   }
 })();
